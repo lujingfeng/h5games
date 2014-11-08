@@ -1669,19 +1669,6 @@ fg_api.prototype.adsModule = function() {
 		if (self.config.ads.off) {
 			return;
 		}
-
-		faZepto.getScript("http://imasdk.googleapis.com/js/sdkloader/ima3.js", function() {
-
-			if (self.config.ads.show_initial) {
-				M.showAd();
-			} else if (!self.debug) {
-				M.delayNextAdModal(true);
-			}
-
-			if (self.config.ads.show_timed) {
-				M.showTimed(self.config.ads.show_timed_ms);
-			}
-		});
 	};
 
 	module.prototype.resizeAdContainer = function(width, height) {
@@ -3408,7 +3395,7 @@ fg_api.prototype.orientationModule = function() {
 			fgLandscapeOverlay.setAttribute("id", "fg-landscape-overlay");
 
 			var fgLandscapeImage = document.createElement("img");
-			fgLandscapeImage.setAttribute("src", "/html5games/gameapi/v1/images/IconRotateToLandscape.png");
+			fgLandscapeImage.setAttribute("src", "html5games/gameapi/v1/images/IconRotateToLandscape.png");
 			fgLandscapeImage.setAttribute("class", "fg-orientation-icon");
 			fgLandscapeImage.setAttribute("alt", "switch to landscape");
 			fgLandscapeOverlay.appendChild(fgLandscapeImage);
@@ -3419,7 +3406,7 @@ fg_api.prototype.orientationModule = function() {
 			fgPortraitOverlay.setAttribute("id", "fg-portrait-overlay");
 
 			var fgPortraitImage = document.createElement("img");
-			fgPortraitImage.setAttribute("src", "/html5games/gameapi/v1/images/IconRotateToPortrait.png");
+			fgPortraitImage.setAttribute("src", "html5games/gameapi/v1/images/IconRotateToPortrait.png");
 			fgPortraitImage.setAttribute("class", "fg-orientation-icon");
 			fgPortraitImage.setAttribute("alt", "switch to portrait");
 			fgPortraitOverlay.appendChild(fgPortraitImage);
@@ -3809,7 +3796,8 @@ fg_api.prototype.init = function() {
 	var newStylesheet = document.createElement("link");
 	newStylesheet.setAttribute("rel", "stylesheet");
 	newStylesheet.setAttribute("type", "text/css");
-	newStylesheet.setAttribute("href", self.config.assetsPath + "/css/play.css");
+	//newStylesheet.setAttribute("href", self.config.assetsPath + "/css/play.css");
+    newStylesheet.setAttribute("href", self.config.assetsPath + "css/play.css");
 	// newStylesheet.onload = onloadCallback;
 	self.onloadTimer = setTimeout(onloadCallback, 750);
 	self.headElement.appendChild(newStylesheet);
