@@ -247,7 +247,7 @@ var _fgq = [];
 
     }
     firstJS.parentNode.insertBefore(fgJS, firstJS);
-})(document, 'js/gameapi.js');
+})(document, 'js/gameapi.js?2321321');
 
 // Third-Party API Integration
 /*
