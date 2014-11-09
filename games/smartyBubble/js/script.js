@@ -13,6 +13,58 @@ var _fgq = [];
                 "ads": 0
             },
             "game_i18n": {
+			    "zh": {
+				   "language_name": "English",
+                    "thousands_separator": ",",
+                    "ok": "OK",
+                    "cancel": "Cancel",
+                    "restart": "Restart",
+                    "main_menu": "Main Menu",
+                    "continue": "Continue",
+                    "resume": "Resume",
+                    "paused": "Paused",
+                    "main_menu_play": "Play",
+                    "main_menu_statistics": "Statistics",
+                    "main_menu_highscores": "Highscores",
+                    "main_menu_more_games": "More Cool Games",
+                    "update_optional_message": "A new and improved version of Smarty Bubbles is available! Update now for free!",
+                    "update_optional_button_update": "Download",
+                    "update_optional_button_later": "Later",
+                    "update_forced_message": "A new and improved version of Smarty Bubbles is available! Update now for free!",
+                    "update_forced_button_update": "Download",
+                    "results_game_won": "All Cleared!",
+                    "results_game_lost": "Game Over!",
+                    "results_balls_shot": "Balls shot",
+                    "results_bubbles_cleared": "Bubbles cleared",
+                    "results_largest_group": "Largest group",
+                    "results_hit_ratio": "Hit ratio",
+                    "results_play_time": "Time",
+                    "results_new_highscore": "New Highscore!",
+                    "results_old_score": "Previous Best",
+                    "statistics_title": "Statistics",
+                    "statistics_bubbles_cleared": "Bubbles cleared",
+                    "statistics_play_time": "Time played",
+                    "statistics_games_played": "Games played",
+                    "statistics_games_won": "Games won",
+                    "statistics_fewest_balls": "Fewest shots",
+                    "highscores_title": "Highscores",
+                    "highscores_you": "Player",
+                    "restart_dialog_message": "Restart the game? The current game will end.",
+                    "quit_to_main_menu_dialog_message": "Quit to menu? The current game will end.",
+                    "api.back": "&laquo; Back",
+                    "api.home": "&raquo; More Games",
+                    "api.close": "Close",
+                    "api.ad_modal_header": "Advertisement &ndash; will close in&hellip;",
+                    "more_games_image": "html5games\/branding\/html5games\/More_Games600x253_onWhite.png",
+                    "more_games_image2": "html5games\/branding\/html5games\/More_Games600x253_SimpleDark.png",
+                    "more_games_image3": "html5games\/branding\/html5games\/More_Games600x253_SimpleWhite.png",
+                    "more_games_image\u00b2": "html5games\/branding\/html5games\/More_Games600x603_onWhite.png",
+                    "more_games_image2\u00b2": "html5games\/branding\/html5games\/More_Games600x603_SimpleDark.png",
+                    "more_games_image3\u00b2": "html5games\/branding\/html5games\/More_Games600x603_SimpleWhite.png",
+                    "more_games_url": "http:\/\/html5games.com\/",
+                    "preload_image": "html5games\/gameapi\/v1\/invisPreloadImage.png",
+                    "test_preload_image": "html5games\/gameapi\/v1\/testPreloadImage.png"
+				},
                 "default": {
                     "language_name": "English",
                     "thousands_separator": ",",
@@ -212,7 +264,7 @@ var _fgq = [];
             "pid": "4638e320-4444-4514-81c4-d80a8c662371",
             "aid": "A1000-1",
             "name": "\"Smarty Bubbles\"",
-            "languages": ["de", "en", "tr"],
+            "languages": ["de", "en", "tr", "zn"],
             "i18n": {
                 "default": {
                     "api.back": "&laquo; Back",
@@ -240,8 +292,8 @@ var _fgq = [];
                 }
             },
             "style": "\t<style type=\"text\/css\">\n\t\t#fg-root #fg-splash-screen { background-color: #e54d26; }\n\t<\/style>",
-            "headerHtml": "<header id=\"fg-header\"><div id=\"fg-back\" class=\"icon-arrow icon-arrow-left\" data-fg-module=\"navigation\" data-fg-method=\"show\"><\/div><div id=\"fg-logo\"><img src=\"http:\/\/games.cdn.famobi.com\/html5games\/branding\/html5games\/logo.png?v=5\" alt=\"\"><\/div><div class=\"fg-clip\" id=\"fg-clip\"><div class=\"fg-clip-btn\"><img src=\"http:\/\/games.cdn.famobi.com\/html5games\/branding\/html5games\/icon.png?v=5\" alt=\"\"><\/div><\/div><\/header>",
-            "menuHtml": "<ul><li data-famobi-href=\"back\"><a href=\"javascript:void(0);\" data-i18n=\"api.back\"><\/a><\/li><li data-famobi-href=\"moreGames\"><a href=\"javascript:void(0);\" data-i18n=\"api.home\"><\/a><\/li><li class=\"fg-lang\" data-switch-lang=\"de\"><a href=\"javascript:void(0);\"><img class=\"fg-flag\" src=\"http:\/\/facdn.famobi.com\/flags\/flag_de.png\" alt=\"de\"><\/a><\/li><li class=\"fg-lang\" data-switch-lang=\"en\"><a href=\"javascript:void(0);\"><img class=\"fg-flag\" src=\"http:\/\/facdn.famobi.com\/flags\/flag_en.png\" alt=\"en\"><\/a><\/li><li class=\"fg-lang\" data-switch-lang=\"tr\"><a href=\"javascript:void(0);\"><img class=\"fg-flag\" src=\"http:\/\/facdn.famobi.com\/flags\/flag_tr.png\" alt=\"tr\"><\/a><\/li><\/ul>"
+            "headerHtml": "<header id=\"fg-header\"><div id=\"fg-back\" class=\"icon-arrow icon-arrow-left\" data-fg-module=\"navigation\" data-fg-method=\"show\"><\/div><div id=\"fg-logo\"><img src=\"html5games\/branding\/html5games\/logo.png?v=5\" alt=\"\"><\/div><div class=\"fg-clip\" id=\"fg-clip\"><div class=\"fg-clip-btn\"><\/div><\/div><\/header>",
+            "menuHtml": "<ul><li data-famobi-href=\"back\"><a href=\"javascript:void(0);\" data-i18n=\"api.back\"><\/a><\/li><li data-famobi-href=\"moreGames\"><a href=\"javascript:void(0);\" data-i18n=\"api.home\"><\/a><\/li><li class=\"fg-lang\" data-switch-lang=\"de\"><a href=\"javascript:void(0);\"><\/a><\/li><li class=\"fg-lang\" data-switch-lang=\"en\"><a href=\"javascript:void(0);\"><\/a><\/li><li class=\"fg-lang\" data-switch-lang=\"tr\"><a href=\"javascript:void(0);\"><\/a><\/li><\/ul>"
         },
         _fgq);
 
