@@ -27,7 +27,7 @@ var _fgq = [];
 					"more_games_image\u00b2": "html5games\/branding\/html5games\/More_Games600x603_onWhite.png",
 					"more_games_image2\u00b2": "html5games\/branding\/html5games\/More_Games600x603_SimpleDark.png",
 					"more_games_image3\u00b2": "html5games\/branding\/html5games\/More_Games600x603_SimpleWhite.png",
-					"more_games_url": "http://m.mobogenie.com/h5game/gameList.html",
+					"more_games_url": "http://www.h5game.net",
 					"preload_image": "html5games\/gameapi\/v1\/invisPreloadImage.png",
 					"test_preload_image": "html5games\/gameapi\/v1\/testPreloadImage.png"
 				},

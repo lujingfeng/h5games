@@ -3762,7 +3762,7 @@ fg_api.prototype.init = function() {
 
 	self.rootElement.appendChild(self.fgOverlay);
 
-	document.title = JSON.parse(self.config.name);
+	//document.title = JSON.parse(self.config.name);
 
 	function require(module) {
 		return self[module + "Module"].call(self);
