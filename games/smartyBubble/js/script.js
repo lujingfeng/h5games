@@ -263,7 +263,7 @@ var _fgq = [];
             "uuid": "d8f24956-dc91-4902-9096-a46cb1353b6f",
             "pid": "4638e320-4444-4514-81c4-d80a8c662371",
             "aid": "A1000-1",
-            "name": "\"Smarty Bubbles\"",
+            "name": "无秘再分享，泡泡又来爽",
             "languages": ["de", "en", "tr", "zn"],
             "i18n": {
                 "default": {
