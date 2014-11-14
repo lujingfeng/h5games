@@ -1,0 +1,181 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>超级虐跳</title>
+<link rel="stylesheet" href="css/stylesheet.css" type="text/css" charset="utf-8">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1, IE=9">
+<meta name="format-detection" content="telephone=no">
+<meta name="HandheldFriendly" content="true">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<meta name="HandheldFriendly" content="true">
+<meta name="robots" content="noindex,nofollow">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-title" content="Jumping Thief">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="icon" href="icon.ico">
+
+<style>#sg-loadscrn{
+    position:fixed; top:0;left:0;width:100%; height:100%; background-color:#fff; z-index:9999;
+}
+
+#sg-spinner{
+	position: absolute; width: 150px; height: 50px; top:50%; left:50%; margin-top:-25px; margin-left:-75px;
+	background-image: url('image/sg-loader.gif');
+}
+
+#sg-spinner.no-img{
+    background: #ffffff;
+}
+
+#sg-loadtext{
+    position:absolute;
+    font-family: sans-serif;
+    top:50%; left:50%;
+    width: 250px;
+    margin-left:-125px;
+    margin-top:-125px;
+    text-align:center;
+    line-height:150%;
+    font-size:16px;
+}</style>
+<script type="text/javascript">
+var imgUrl = "hhttp://h5game.net/tiaoyue/assets/run@2x.png";
+var lineLink = "http://h5game.net/tiaoyue/game.html";
+var descContent = '';
+var shareTitle = '超级虐跳';
+var appid = '';
+ 
+function shareFriend() {
+	WeixinJSBridge.invoke('sendAppMessage',{
+		"appid": appid,
+		"img_url": imgUrl,
+		"img_width": "200",
+		"img_height": "200",
+		"link": lineLink,
+		"desc": descContent,
+		"title": shareTitle
+	}, function(res) {
+		//_report('send_msg', res.err_msg);
+	})
+}
+function shareTimeline() {
+	WeixinJSBridge.invoke('shareTimeline',{
+		"img_url": imgUrl,
+		"img_width": "200",
+		"img_height": "200",
+		"link": lineLink,
+		"desc": descContent,
+		"title": shareTitle
+	}, function(res) {
+		   //_report('timeline', res.err_msg);
+	});
+}
+function shareWeibo() {
+	WeixinJSBridge.invoke('shareWeibo',{
+		"content": descContent,
+		"url": lineLink,
+	}, function(res) {
+		//_report('weibo', res.err_msg);
+	});
+}
+// 当微信内置浏览器完成内部初始化后会触发WeixinJSBridgeReady事件。
+document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+	// 发送给好友
+	WeixinJSBridge.on('menu:share:appmessage', function(argv){
+		shareFriend();
+	});
+	// 分享到朋友圈
+	WeixinJSBridge.on('menu:share:timeline', function(argv){
+		shareTimeline();
+	});
+	// 分享到微博
+	WeixinJSBridge.on('menu:share:weibo', function(argv){
+		shareWeibo();
+	});
+}, false);
+
+</script>
+<script type="text/javascript">
+        window.gameLangs = ['en', 'es', 'fr', 'de', 'it', 'ru', 'tr', 'pt'];
+        window.gameJS = [
+        'src/phaser.min.js',
+        'src/Boot.js',
+        'src/Preloader.js',
+        'src/Game.js',
+        'src/Texts.js',
+        'src/SoundManager.js',
+        'src/GUI.js',
+        'src/Column.js',
+        'src/Character.js'
+        ]
+        window.gameOnLoadScript = "startGame();";
+    </script><script type="text/javascript" src="js/softgames-1.1.js"></script>
+    <script type="text/javascript" src="js/sg.hooks.js"></script>
+</head>
+<body>
+<!-- <script src="http://markknol.github.io/console-log-viewer/console-log-viewer.js"></script> -->
+
+<div id="game"></div>
+<div id="orientation"></div>
+
+<script type="text/javascript">
+    document.ontouchstart = function(e){
+	    e.preventDefault();
+	}
+    var lang;
+    var game;
+    var iPhone5;
+    var iPhone4;
+    startGame = (function () {
+        lang = SG.lang;//SG_Hooks.getLanguage(['en', 'ru']); // ,'de', 'es', 'fr', 'it','pt', 'tk'
+
+
+        var iPhone = navigator.userAgent.toLowerCase().indexOf('iphone') != -1;
+        var pixelRatio = window['devicePixelRatio'] || 1;
+        iPhone5 = iPhone && pixelRatio==2 && window.screen.height == 568;
+        iPhone4 = !iPhone5 && iPhone;
+
+
+        var width = 320;
+        var height = 480;
+        var product = window.innerWidth * window.innerHeight;
+
+        if( iPhone5 )
+            height = 530;
+
+        if( product > 400000 || pixelRatio==2){
+            width *= 2;
+            height *= 2;
+        }
+
+        game = new Phaser.Game(width, height, Phaser.CANVAS, 'game');
+
+        game.state.add('Boot', TheTower.Boot);
+        game.state.add('Game', TheTower.Game);
+        game.state.add('Preloader', TheTower.Preloader);
+
+        game.state.start('Boot');
+
+
+    });
+</script>
+<script>
+    var qikeContentPreSet = {
+        shareContent:{
+            'imgUrl': '',
+            'link': window.location.href,
+            'desc': '超级虐跳真的好虐，快跟你的好友比比看谁更吊吧。',
+            'title': '超级虐跳'
+               }
+            };
+
+ </script>
+
+</body>
+</html>

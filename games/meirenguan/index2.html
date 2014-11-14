@@ -1,0 +1,1167 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>
+			英雄难过美人关
+		</title>
+		<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1">
+		<meta name="game-id" content="meirenzhaocha3">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="mobile-web-app-capable" content="yes">
+		<style>
+			*{tap-highlight-color:transparent;-webkit-tap-highlight-color:transparent}html,body{width:100%;height:100%;margin:0;padding:0;overflow:hidden;font-family:Arial,Helvetica,"Hiragino
+			Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;font-size:12px;-webkit-user-select:none}h3{line-height:1.2}.container{position:absolute;top:0;left:0;height:100%;width:100%}.scene{display:none;position:absolute;top:0;left:0;height:100%;width:100%}.bg{position:fixed;width:100%;height:100%;left:0;top:0}.bg-girls{position:absolute;bottom:0;left:-10%;width:120%}.btn-start{position:absolute;top:58%;width:50%;left:25%}.img-title{position:absolute;top:0;left:0;width:100%}.img-title-panel{width:80%;left:10%}.img-title-level{top:-6%}.bg-panel{width:100%;display:block}.panel{position:absolute;font-family:'Comic
+			Sans MS',cursive}.panel-title{position:absolute;top:-10%;width:72%;left:14%}.panel-level{position:absolute;width:80%;left:10%;top:33%;color:#fff;text-shadow:1px
+			1px 0 #000,-1px -1px 0 #000,1px -1px 0 #000,-1px 1px 0 #000;font-size:2em}.panel-level-wrap{position:absolute;width:84%;height:75%;top:15%;left:8%;overflow:hidden}.panel-level-content{position:absolute;width:100%;height:100%;top:0;left:0}.panel-level-content-transition{-webkit-transition:left
+			.2s;-ms-transition:left .2s;-o-transition:left .2s;-moz-transition:left
+			.2s;transition:left .2s}.btn-level{position:absolute;top:0;left:0;width:20%;height:0;padding-bottom:22.7%}@-webkit-keyframes
+			bounce{70%,76%,100%{-webkit-transform:translateZ(0)}86%,94%{-webkit-transform:translate3d(0,3%,0)}82%{-webkit-transform:translate3d(0,-16%,0)}91%{-webkit-transform:translate3d(0,-8%,0)}97%{-webkit-transform:translate3d(0,-3%,0)}}.btn-level-current{filter:hue-rotate(130deg);-webkit-filter:hue-rotate(130deg);-webkit-animation:bounce
+			3s 0 infinite;-webkit-transform:translateZ(0)}.btn-level-number{position:absolute;width:100%;top:10%;left:0;font-weight:700;text-align:center}.btn-level-img{position:absolute;left:0;top:0;width:100%;height:100%}.btn-level-img-inactive{left:-4%;top:-10%;width:104%;height:110%}.btn-cussor{position:absolute;top:50%;width:10%}.btn-cussor-left{left:-5%;-webkit-transform:rotateY(180deg);-webkit-transform-origin:50%
+			50%;-moz-transform:rotateY(180deg);-moz-transform-origin:50% 50%;-o-transform:rotateY(180deg);-o-transform-origin:50%
+			50%;-ms-transform:rotateY(180deg);-ms-transform-origin:50% 50%;transform:rotateY(180deg);transform-origin:50%
+			50%}.btn-cussor-right{right:-5%}.dlg{position:absolute;display:none;width:70%;left:15%;top:30%}.bg-dlg{position:relative}.btn-dlg{position:absolute;bottom:10%;width:42%}.btn-dlg-left{left:6%}.btn-dlg-right{right:6%}.btn-dlg-center{width:50%;left:25%}.dlg-mask{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.3)}.dlg-content{position:absolute;top:20%;left:0;font-size:1em;line-height:1.5;width:100%;text-align:center;color:#4a2d4c}.img-title-dlg{width:90%;left:5%;top:-12%}.img-title-game{position:absolute;left:25%;width:50%}.progress{position:absolute;top:3%;left:5%;width:80%;color:#fe5}.progress:before{content:'
+			';position:absolute;width:80%;height:200%;left:10%;top:-90%;background:-webkit-radial-gradient(rgba(0,0,0,.5),rgba(0,0,0,0)
+			80%)}@-webkit-keyframes penalty{from{opacity:1;-webkit-transform:translate3d(0,0,0)}to{opacity:0;-webkit-transform:translate3d(0,100%,0)}}.progress-penalty{position:absolute;top:50%;left:30%;color:red;font-size:.8em;text-shadow:0
+			0 3px #000;-webkit-transform:translate3d(0,0,0);-webkit-animation:penalty
+			.5s;opacity:0;display:none}.progress-level{position:absolute;bottom:40%;left:26%;width:50%;text-align:center;font-size:2em;line-height:.9em;font-family:'Comic
+			Sans MS',cursive}.progress-tips{position:absolute;right:5%;bottom:28%;font-size:1rem}.img-progress{position:relative;display:block;width:100%}.progress-info{width:90%;left:5%;position:absolute;font-size:1rem}.progress-bar{position:absolute;width:96%;height:18%;top:78.8%;left:.6%;background:#d90;border-radius:10px}.progress-bar-inner{position:absolute;width:100%;height:100%;top:0;left:0;background:-webkit-linear-gradient(#f3e8c1,#fff47b
+			50%,#e1c228);border-radius:10px;transition:width linear .1s;-webkit-transition:width
+			linear .1s}.progress-secs{position:absolute;right:-2.5em;top:57%}.game-pics{position:absolute;width:100%;left:0;height:65%;top:16%}.game-pic{position:absolute;width:50%;height:100%;top:0;text-align:center}.game-pic-left{left:0}.game-pic-right{right:0}.game-pic-img{display:block;width:100%;max-height:100%}.game-pic-inner{vertical-align:top;position:relative;overflow:hidden;max-height:100%}.game-pic-area{position:absolute}.game-pic-area-pick{border-radius:20%;border:red
+			dotted 3px}.btn-game{position:absolute;bottom:3%;width:40%}.btn-game-left{left:5%}.btn-game-right{right:5%}.loading{position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.3)}.loading-content{position:absolute;top:50%;left:50%;height:100px;width:100px;margin-left:-50px;margin-top:-50px;background:rgba(0,0,0,.6);border-radius:5%;text-align:center}.loading-percent{color:#fff;position:absolute;bottom:0;width:100%;left:0;text-align:center}@-webkit-keyframes
+			rotate{to{-webkit-transform:rotate3d(0,0,1,360deg)}}.loading-content:before,.loading-content:after{content:'
+			';position:absolute;top:50%;left:50%;height:8px;width:8px;margin-left:-4px;margin-top:-4px;border-radius:50%}.loading-content:before{box-shadow:0
+			27px rgba(255,255,255,.3),19px 19px rgba(255,255,255,.3),27px 0 rgba(255,255,255,.3),19px
+			-19px rgba(255,255,255,.3),0 -27px rgba(255,255,255,.3),-19px -19px rgba(255,255,255,.3),-27px
+			0 rgba(255,255,255,.3),-19px 19px rgba(255,255,255,.3)}.loading-content:after{box-shadow:0
+			27px #fff,19px 19px rgba(255,255,255,.8),27px 0 rgba(255,255,255,.6);-webkit-animation:rotate
+			infinite steps(8,end) 1s}.img-defer{opacity:0}
+		</style>
+	</head>
+	<body>
+		<img class="bg" src="assets/img/bg.jpg">
+		<div id="container" class="container">
+			<div id="scene-start" class="scene scene-start" style="display:block">
+				<img class="img-title" src="assets/img/title.png">
+				<img class="bg-girls" src="assets/img/bg-girls.png">
+				<img id="btn-start" class="btn-start" src="assets/img/btn-start.png">
+			</div>
+			<div id="scene-level" class="scene scene-level">
+				<img class="img-title img-title-level" src="assets/img/title.png">
+				<div id="panel-level" class="panel panel-level">
+					<img class="bg-panel bg-panel-level" src="assets/img/bg-panel.png">
+					<img class="panel-title panel-title-level" src="assets/img/title-level.png">
+					<div class="panel-level-wrap">
+						<div id="panel-level-content" class="panel-level-content">
+						</div>
+					</div>
+					<img id="btn-cussor-left" class="btn-cussor btn-cussor-left" src="assets/img/btn-cursor-inactive.png">
+					<img id="btn-cussor-right" class="btn-cussor btn-cussor-right" src="assets/img/btn-cursor.png">
+				</div>
+			</div>
+			<div id="scene-game" class="scene scene-game">
+				<div class="progress">
+					<div class="progress-bar">
+						<div id="progress-bar" class="progress-bar-inner">
+						</div>
+					</div>
+					<div class="progress-secs">
+						<span id="progress-secs">
+							60
+						</span>
+						秒
+					</div>
+					<img class="img-progress" src="assets/img/progress.png">
+					<span id="progress-level" class="progress-level">
+						3
+					</span>
+					<span class="progress-tips">
+						共
+						<span id="progress-diff">
+							6
+						</span>
+						处不同
+					</span>
+					<div class="progress-info">
+						<div style="float:left">
+							已尝试
+							<span id="progress-tries">
+								7
+							</span>
+							次
+						</div>
+						<div style="float:right">
+							正确率
+							<span id="progress-correct">
+								100%
+							</span>
+						</div>
+						<div style="text-align:center">
+							找出
+							<span id="progress-founds">
+								22
+							</span>
+							处
+						</div>
+					</div>
+					<div id="progress-penalty" class="progress-penalty">
+						-5秒
+					</div>
+				</div>
+				<div class="game-pics">
+					<div class="game-pic game-pic-left">
+						<div id="game-pic-left" class="game-pic-inner">
+						</div>
+					</div>
+					<div class="game-pic game-pic-right">
+						<div id="game-pic-right" class="game-pic-inner">
+						</div>
+					</div>
+				</div>
+				<img id="btn-game-return" class="btn-game btn-game-left" src="assets/img/btn-return.png">
+				<img id="btn-game-more" class="btn-game btn-game-right" src="assets/img/btn-more.png">
+			</div>
+		</div>
+		<div id="dlg-mask" class="dlg-mask">
+		</div>
+		<div id="dlg-failed" class="dlg dlg-failed" style="display:none">
+			<img class="bg-panel bg-dlg" src="assets/img/bg-panel.png">
+			<img class="img-title img-title-dlg" src="assets/img/title-failed.png">
+			<img class="btn-dlg btn-dlg-left" src="assets/img/btn-retry.png">
+			<img class="btn-dlg btn-dlg-right" src="assets/img/btn-share-help.png">
+			<div class="dlg-content">
+				本关没有在1分钟内完成，
+				<br>
+				再来一局？
+			</div>
+		</div>
+		<div id="dlg-success" class="dlg dlg-success">
+			<img class="bg-panel bg-dlg" src="assets/img/bg-panel.png">
+			<img class="img-title img-title-dlg" src="assets/img/title-success.png">
+			<img class="btn-dlg btn-dlg-left" src="assets/img/btn-next.png">
+			<img class="btn-dlg btn-dlg-right" src="assets/img/btn-share.png">
+			<div class="dlg-content">
+				恭喜通过第
+				<span id="dlg-success-level">
+					6
+				</span>
+				关
+				<br>
+				一共找出了
+				<span id="dlg-success-diff">
+					4
+				</span>
+				个不同
+				<br>
+				耗时
+				<span id="dlg-success-secs">
+					6
+				</span>
+				秒
+			</div>
+		</div>
+		<div id="dlg-congrats" class="dlg dlg-success">
+			<img class="bg-panel bg-dlg" src="assets/img/bg-panel.png">
+			<img class="img-title img-title-dlg" src="assets/img/title-success.png">
+			<img class="btn-dlg btn-dlg-center" src="assets/img/btn-share.png">
+			<div class="dlg-content">
+				<h3>
+					恭喜你！你打通关了！
+				</h3>
+				你真是霸气侧漏的大英雄，
+				<br>
+				美人关已经全部打通了！
+			</div>
+		</div>
+		<div id="loading" class="loading">
+			<div class="loading-content">
+				<div id="loading-percent" class="loading-percent">
+				</div>
+			</div>
+		</div>
+		<script id="template-level" type="text/template">
+			< div class = "btn-level btn-level##a##" > <img class = "btn-level-img btn-level-img##a##"src = "assets/img/btn-level##a##.png" / ><span class = "btn-level-number" > ##n## < /span></div > 
+		</script>
+		<script>
+			!
+			function(e, t) {
+				"callShare more statScore getRank showAd".replace(/\S+/g,
+				function(c) {
+					t[c] = e
+				});
+				var c = t._sd = {};
+				t.updateData = function(e) {
+					for (var t in e) e.hasOwnProperty(t) && (c[t] = e[t])
+				}
+			} (function() {},
+			LBShare = {}),
+			document.write('<script src="js/g_share.js"><\/script>');
+			
+		</script>
+		<script>
+			(function(Wb, Sc, le, b, c, me, Xb, Tc, $a, ne, Uc, X, C, Vc, oe, pe, oa, Sh, Yb, s, l, Wc, qe, Xc, D, z, Yc, Zb, $b, ac, Th, Zc, Uh, J, Vh, y, re, Wh, Xh, bc, Na, $c, se, Aa, te, E, ue, ve, Oa, we, xe, ye, ze, ad, Ae, bd, Be, Ce, cd, dd, De, ab, ed, Ee, Fe, Ge, fd, He, Ie, cc, Je, dc, Ke, ec, Le, Ba, Me, wb, fc, $, gd, hd, id, jd, kd, Ne, gc, ld, bb, cb, xb, md, Oe, db, Pe, ca, hc, yb, da, Qe, Yh, Pa, Zh, Re, $h, Se, Te, Ue, nd, Ve, zb, ic, jc, We, kc, lc, V, eb, Xe, Q, od, Ca, Ye, Ze, mc, Ab, Bb, $e, af, nc, fb, ea, pd, gb, bf, cf, qd, hb, rd, Cb, sd, pa, df, td, Db, qa, Eb, oc, pc, S, T, ef, Y, ff, gf, ud, hf, jf, Da, H, vd, kf, wd, O, lf, xd, yd, Fb, ib, mf, ka, nf, jb, of, W, pf, zd, kb, Ad, Bd, Gb, qf, rf, sf, tf, fa, uf, vf, wf, xf, yf, zf, Af, Bf, Cf, Df, Ef, Ff, Gf, Hf, If, Jf, Kf, Lf, Cd, Mf, Nf, Of, Pf, Qf, Rf, Sf, Tf, Uf, ra, a, Dd, Vf, Wf, Ed, B, qc, Xf, Yf, Zf, $f, Fd, ag, bg, u, cg, aa, Gd, Hd, lb, Ea, dg, eg, sa, r, ta, fg, gg, hg, m, ig, jg, kg, Qa, ai, lg, rc, bi, mg, ng, og, pg, qg, rg, Fa, sc, sg, Id, tg, ug, vg, mb, wg, tc, Hb, xg, yg, v, Ib, Jd, zg, Ra, Ag, Kd, nb, M, Ld, Bg, Cg, Dg, q, Eg, Fg, Gg, Md, Nd, Hg, Ig, Jg, Od, ga, Pd, Kg, Lg, uc, Mg, Ng, ba, f, ob, Og, Ga, Pg, Qg, Rg, Qd, Rd, Sd, Jb, Sg, Tg, Ug, Vg, Kb, Wg, ci, Xg, Yg, di, Zg, vc, $g, ha, la, ua, ah, va, bh, K, ch, wa, e, dh, eh, fh, wc, xa, gh, hh, Td, xc, ih, x, ia, jh, ya, kh, lh, F, Lb, mh, nh, Mb, oh, Ud, yc, t, ph, qh, I, rh, sh, Nb, Vd, Ha, th, pb, uh, vh, Wd, zc, Xd, wh, Ac, xh, yh, Ia, zh, P, Yd, qb, Zd, $d, Ah, Bh, Ch, Dh, Eh, Fh, Gh, Ob, Bc, Cc, Hh, ae, Ih, be, rb, Dc, ce, ma, de) { (function(na, Ja) {
+					function Sa() {}
+					function Ta(d) {
+						if (typeof _hmt !== [pe, a, cg, a, u][c](b)) _hmt[oa](d)
+					}
+					function Jh(d, k) {
+						var g = new ch;
+						try {
+							g[[s, a, yc, a, ng, a][c](b)] = [t, a, Oa][c](b)
+						} catch(p) {}
+						g[[ye, a, I][c](b)](sg, d, D);
+						g[[bd, a, Id, a, ad, a][c](b)] = function() {
+							if (g[[s, a, wg, a][c](b)] === tc) {
+								g[[bd, a, Id, a, ad, a][c](b)] = vc;
+								var d = g[mh];
+								d === dd ? k(D, g[[s, a, yc, a, De, a, Oa][c](b)]) : k(z, d)
+							}
+						};
+						g[[v, a, ab][c](b)]()
+					}
+					function Kh(d, k) {
+						Jh(d,
+						function(d, p) {
+							if (d) {
+								var e;
+								try {
+									e = oe[[Ee, a][c](b)](p)
+								} catch(f) {
+									return k(z, [He, F, fd, F, Fe][c](b))
+								}
+								k(D, e)
+							} else k(d, p)
+						})
+					}
+					function N(d, k) {
+						var g;
+						if (d && typeof d === [Ld, l, Ag, a, Ib][c](b)) {
+							var p;
+							a: {
+								if (d && [e, a, aa][c](b) in d && (p = d[[e, a, aa][c](b)], typeof p === [Wc, l, a, s][c](b) && (p === r || r in d && p - x in d))) {
+									p = D;
+									break a
+								}
+								p = z
+							}
+							if (p) for (p = d[[e, a, aa][c](b)], g = r; g < p && k(d[g], g) !== z; ++g);
+							else for (g in p = [xc, a, dc][c](b) in d, d) if ((!p || d[[xc, a, dc][c](b)](g)) && k(d[g], g) === z) break
+						}
+					}
+					function ee(a, b) {
+						var c = [];
+						N(a,
+						function(a, d) {
+							if (b(a, d)) c[oa](a)
+						});
+						return c
+					}
+					function Lh(a, c) {
+						var b = z;
+						N(a,
+						function(a, d) {
+							if (c(a, d)) return b = D,
+							z
+						});
+						return b
+					}
+					function sb(d, k) {
+						var g = d[ec];
+						if (g) g[Le](k);
+						else d[[Ba, a][c](b)] += F + k
+					}
+					function Ua(d, k) {
+						var g = d[ec];
+						return g ? g[Me](k) : Lh(d[[Ba, a][c](b)][wb](F),
+						function(a) {
+							return a === k
+						})
+					}
+					function Va(d, k) {
+						var g = d[ec];
+						if (g) g[[s, a, fc, a][c](b)](k);
+						else if (g = d[[Ba, a][c](b)]) {
+							var e = ee(g[wb](F),
+							function(a) {
+								return a !== k
+							})[c](F);
+							e !== g && (d[[Ba, a][c](b)] = e)
+						}
+					}
+					function ja(d) {
+						d[[$, a][c](b)][gd] = [l, Dg][c](b)
+					}
+					function R(d) {
+						d[[$, a][c](b)][gd] = [eh, a][c](b)
+					}
+					function U(d, k, g, e) {
+						N(k[wb](F),
+						function(k) {
+							d[[dh, a, jd, a, I, a, s][c](b)](k, g, Vc(e))
+						})
+					}
+					function Ec(d, k, g, e) {
+						N(k[wb](F),
+						function(k) {
+							d[[s, a, fc, a, Ne, a, jd, a, I, a, s][c](b)](k, g, Vc(e))
+						})
+					}
+					function Ka(a, b) {
+						N(b,
+						function(b, c) {
+							a[c] = b
+						});
+						return a
+					}
+					function La(d) {
+						if (d[[cb, a, q, a, ld, a, Yd][c](b)]) d[[cb, a, q, a, ld, a, Yd][c](b)]();
+						else d[[s, a, Hg, a][c](b)] = z
+					}
+					function Ma(d) {
+						if (d[md]) d[md]();
+						else d[[Ig, a, Oe, l, l, e, a][c](b)] = D
+					}
+					function G(d) {
+						return lb[[B, a, hc, a, ca, a, Pe][c](b)](d)
+					}
+					function Mh(a) {
+						return Nh[a]
+					}
+					function Fc(d) {
+						typeof d !== Qd && (d = Fd(d));
+						return d[[s, a, Sd, a][c](b)](Oh, Mh)
+					}
+					function Ph(d, k) {
+						return d[[s, a, Sd, a][c](b)](/##([^#]+)##/g,
+						function(d, e) {
+							return k[[xc, a, dc][c](b)](e) ? Fc(Fd(k[e])) : d
+						})
+					}
+					function Gc() {
+						var d = na[[ga, a, Kg][c](b)],
+						k = na[[ga, a, Eg, a, Ob][c](b)],
+						g = C[Cb](d / Hc, k / Ic);
+						Jc = C[K](g * Hc);
+						Kc = C[K](g * Ic);
+						var p = C[K]((d - Jc) / pa),
+						f = C[K]((k - Kc) / pa),
+						g = C[K](df * g / td);
+						Ka(Qh[[$, a][c](b)],
+						function(d, k, g, p, f, h) {
+							d[Db] = k;
+							d[[qa, a, Ob][c](b)] = g;
+							d[Eb] = p;
+							d[[e, a, xa][c](b)] = f;
+							d[[Cc, a][c](b)] = h;
+							return d
+						} ({},
+						Jc + S, Kc + S, f + S, p + S, g + S));
+						lb[[Bg, a, ef, a, ca, a, T][c](b)][[Cc, a][c](b)] = C[Cb](g, ff) + S;
+						p = C[K](C[Cb](d, k) * td);
+						f = C[K](p / gf);
+						d = function(d, k, g, p, f, h) {
+							d[Db] = k;
+							d[[qa, a, Ob][c](b)] = g;
+							d[Eb] = p;
+							d[[e, a, xa][c](b)] = f;
+							d[[Cc, a][c](b)] = h;
+							return d
+						} ({},
+						p + S, p + S, C[K]((k - p) / pa) + S, C[K]((d - p) / pa) + S, f + S);
+						Ka(Pb[[$, a][c](b)], d);
+						Ka(Qb[[$, a][c](b)], d);
+						Ka(Lc[[$, a][c](b)], d)
+					}
+					function Mc(d, k, g) {
+						function e() {
+							Ec(d, ka, f);
+							Ec(d, [a, ce][c](b), h)
+						}
+						function f() {
+							e();
+							k()
+						}
+						function h() {
+							e();
+							g()
+						}
+						if (d[[mf, a, t, a][c](b)]) return k();
+						U(d, ka, f);
+						U(d, [a, ce][c](b), h)
+					}
+					function za(d, k) {
+						return (d / k * fb)[[Ue, a, u][c](b)](pa) + nc
+					}
+					function Rb() {
+						var d = fe;
+						Nc && (d += x);
+						Oc[[ga, a, va][c](b)] = za(d, ge);
+						Nc && he && (R(Oc), !ie && (ie = D, R(tb), n[O](w[[e, a, q, a, W][c](b)]), Sb || (n[[Xd, a, q, a, e][c](b)](ub), h[P](ub)), d = na[ve])) && (vb = new d([Ca, a, Ha, y, Q, y, te, f, l, B, J, ue, fa][c](b)), vb[[cb, a, ka][c](b)] = se, vb[lg] = D, vb[uh] = D, vb[bc]())
+					}
+					var Rh = na[Sc + [a, B][c](b) + Wf + Xf] || Sa;
+					Yb[[$a, a, pb, a][c](b)] || (Yb[[$a, a, pb, a][c](b)] = function(d) {
+						Sa[[ae, a][c](b)] = d;
+						d = new Sa;
+						Sa[[ae, a][c](b)] = vc;
+						return d
+					});
+					sa[X] || (sa[X] = function() {
+						return (new sa)[[B, a, Yf, a][c](b)]()
+					});
+					var Nh = function(a, b, c, e, f, h) {
+						a[Aa] = b;
+						a[Ng] = c;
+						a[Pg] = e;
+						a[Qe] = f;
+						a[Zg] = h;
+						return a
+					} ({},
+					[Aa, Qg, Pa][c](b), [Aa, Re, Pa][c](b), [Aa, Rg, Pa][c](b), [Aa, Se, Pa][c](b), [Aa, Te, Pa][c](b)),
+					Oh = /[&"'<>]/g;
+					na[Ve](r, x);
+					Ja[[Jb, a, zb][c](b)](function(d, e, g, f, h) {
+						d[[We, a, Ug][c](b)] = e;
+						d[Sg] = g;
+						d[[Nb, a][c](b)] = f;
+						d[[u, a, V][c](b)] = h;
+						return d
+					} ({},
+					z, [Ca, a, Ha, y, Q, y, Xe, J, eb][c](b), Ye, [vh, F, Tf][c](b)));
+					var tb = G($d),
+					Qh = G([Og, a, s][c](b)),
+					Hc = $e,
+					Ic = af,
+					Jc = Hc,
+					Kc = Ic,
+					Qb = G([ea, f, ob, a, u][c](b)),
+					Pb = G([ea, f, ua, a, ba][c](b)),
+					Lc = G([ea, f, bf][c](b));
+					Gc();
+					U(na, [s, a, ud, a][c](b), Gc);
+					U(na, [jf, a, hf, a][c](b), Gc);
+					var Tb = G([l, H, f, P][c](b)),
+					Pc = G([V, a, I, a, f, P][c](b)),
+					Qc = G([V, a, I, a, f, e, a, q, a, e][c](b)),
+					Rc = G([V, a, I, a, f, M, a][c](b)),
+					Z = function(d, e, g, f, h, l) {
+						d[[ia, a, nb][c](b)] = e;
+						d[X] = g;
+						d[O] = f;
+						d[[B, a, t][c](b)] = h;
+						d[[v, a, t][c](b)] = l;
+						return d
+					} ({},
+					[e, l, m, M, a, m, ca, a, xd, a, zg, m, e, a, q, a, e][c](b), r,
+					function() {
+						var d = Z[[ia, a, nb][c](b)],
+						d = Uc[[B, a, be, a, ca][c](b)](d);
+						typeof d === Qd && (d = ne(d, Wd), Tc(d) && (d = r), Z[X] = d)
+					},
+					function() {
+						return Z[X]
+					},
+					function(d) {
+						if (typeof d === [Wc, l, a, s][c](b) && !Tc(d)) {
+							var e = Z[[ia, a, nb][c](b)];
+							d = Z[X] = C[Hb](d, Z[X]);
+							Uc[[v, a, be, a, ca][c](b)](e, d)
+						}
+					}),
+					w = function(d, e, g, f, h) {
+						d[O] = e;
+						d[[mb, a, jb][c](b)] = g;
+						d[ka] = f;
+						d[[B, a, t][c](b)] = h;
+						return d
+					} ({},
+					function() {
+						w[[O, a, u][c](b)] || (w[[O, a, u][c](b)] = D, w[[e, a, q, a, W][c](b)] = pf, w[[l, zd][c](b)] = kb, w[[l, Ad, a][c](b)] = [Ca, a, Ha, y, vg, y][c](b), w[[ia, a, Zd][c](b)] = [[oh, l, sf, Fa, Fa, Fa, tg][c](b), [lh, fa, Fa, a][c](b), [dg, a, eg, Fa, ya, Eh][c](b), [Gh, Fa, ya, Dc, ya, Ch, ya][c](b), [Ef, a, bg, fa, ah][c](b), [Gf, ya, fa, u, l, la, fa][c](b), [If, l, Zf][c](b), [fa, Xg, a, $g][c](b), [Mf, ya, Dd, Fa, Wb, l][c](b), [a, Dd, a, fa, a, u, l, fa][c](b), [ya, Dc, fa, Vg, ya][c](b)], w[ra] = Yb[[$a, a, pb, a][c](b)](vc))
+					},
+					function(d, k, g) {
+						function f() {++l;
+							g && g();
+							l === h && k()
+						}
+						var h = d[[e, a, aa][c](b)];
+						if (h === r) return k();
+						var l = r;
+						N(d,
+						function(a) {
+							Mc(a,
+							function() {
+								a[ma] && (a[ma][v] = x);
+								f()
+							},
+							function() {
+								a[ma] && (a[ma][v] = -x);
+								f()
+							})
+						})
+					},
+					function(d, k, g) {
+						k || (k = Sa);
+						var f = w[[e, a, q, a, W][c](b)],
+						h = w[[l, zd][c](b)],
+						m = w[[ia, a, Zd][c](b)],
+						n = w[ra],
+						Wa = w[[l, Ad, a][c](b)],
+						G = na[Qf][[Rf, a][c](b)]; (new Rh([Sf, Pf, [J, Fh][c](b), Of, [J, Nf][c](b), $b, [a, l][c](b), Zb, [Cd, J][c](b), Kb, Wg, [Lb, Na][c](b), Ed, Lf, Kf, Yg, Jf, Hf, $f, Ff, Ed, ag, [Cd, J][c](b), Df, Cf, Bf][c](b)))[[t, a, yh][c](b)](G) || (Xb[[Gd, a, la][c](b)] = [Af, zf, [Na, y][c](b), [y, Ea][c](b), yf, [J, e][c](b), [xf, a][c](b), [l, Ia][c](b), [Ld, J][c](b), Kb, [y, B][c](b), fh, [a, y][c](b)][c](b));
+						if (d < f) {
+							var A = w[[B, a, t][c](b)](d);
+							if (A) w[[mb, a, jb][c](b)]([A[e], A[s]],
+							function() {
+								k(D, [A])
+							});
+							else {
+								var L = C[K](d / h);
+								if (f = m[L]) {
+									var Za = function(a, b, c, d, e, g) {
+										a[r] = b;
+										a[ta] = c;
+										a[kb] = d;
+										a[sh] = e;
+										a[wf] = g;
+										return a
+									} ({},
+									function(a, b, c) {
+										a[pa] = b;
+										a[ta] = c;
+										return a
+									} ({},
+									function(a, b, c) {
+										a[e] = b;
+										a[t] = c;
+										return a
+									} ({},
+									hg, vf),
+									function(a, b, c) {
+										a[e] = b;
+										a[t] = c;
+										return a
+									} ({},
+									ig, jg)),
+									function(a, b) {
+										a[ta] = b;
+										return a
+									} ({},
+									function(a, b, c) {
+										a[e] = b;
+										a[t] = c;
+										return a
+									} ({},
+									uf, nh)),
+									function(a, b) {
+										a[pa] = b;
+										return a
+									} ({},
+									function(a, b) {
+										a[t] = b;
+										return a
+									} ({},
+									Ih)),
+									function(a, b, c) {
+										a[x] = b;
+										a[pa] = c;
+										return a
+									} ({},
+									function(a, b) {
+										a[t] = b;
+										return a
+									} ({},
+									tf),
+									function(a, b) {
+										a[t] = b;
+										return a
+									} ({},
+									Hh)),
+									function(a, b) {
+										a[tc] = b;
+										return a
+									} ({},
+									function(a, b, c, d, g) {
+										a[qa] = b;
+										a[e] = c;
+										a[t] = d;
+										a[Ea] = g;
+										return a
+									} ({},
+									Ud, mg, Bh, Ud)));
+									Kh([$c, Na, y, y, rf, J, $b, a, l, Zb, J, Kb, y, rg, a, qg, J, qh, Lb, s, ac, Dc, y, Sc, a, rh, a, y, B, a, t, Aa, ia, a, nb, ac][c](b) + f,
+									function(f, p) {
+										function l(d, g, f) {
+											var k = g[[e, a, aa][c](b)];
+											if (k === r && f) return f(D, []);
+											for (var p = [], h = [], A = r; A < k; ++A) {
+												var m = g[A],
+												t = d + A,
+												q = n[t],
+												L,
+												Ya;
+												q ? (L = q[e], Ya = q[s]) : (L = new Hd, L[E] = Wa + m[e], Ya = new Hd, Ya[E] = Wa + m[s], q = n[t] = function(a, b, c, d, g, f) {
+													a[e] = b;
+													a[s] = c;
+													a[u] = d;
+													a[Ea] = g;
+													a[qa] = f;
+													return a
+												} ({},
+												L, Ya, m[u], m[Ea], m[qa]), (m = Za[t]) && N(m,
+												function(a, b) {
+													var c = q[u][b];
+													c ? Ka(c, a) : q[u][b] = a
+												}), q[v] = r, L[ma] = q, Ya[ma] = q);
+												h[oa](q);
+												p[oa](L, Ya)
+											}
+											w[[mb, a, jb][c](b)](p,
+											function() {
+												f && f(D, h)
+											})
+										}
+										if (f && p && p[[e, a, aa][c](b)] > r) {
+											var A = d % h;
+											g ? l(d, p, k) : (l(d, p[[sc, a][c](b)](A, A + x), k), l(d + x, p[[sc, a][c](b)](A + x)), l(L * kb, p[[sc, a][c](b)](r, A)))
+										} else k(z, [qf, a, Tg, a, s, F, s, a, yc, a, F, ph][c](b))
+									})
+								} else k(z, [of, a, nb, F, Bd, F, Gb][c](b))
+							}
+						} else k(z, [nf, F, Bd, F, fd][c](b))
+					},
+					function(a) {
+						return w[ra][a]
+					}),
+					n = function(d, f, g, h, l, m, n, t, r, A, L, u, x) {
+						d[rb] = f;
+						d[[ib, a][c](b)] = g;
+						d[O] = h;
+						d[[v, a, Mb][c](b)] = l;
+						d[Fb] = m;
+						d[[Xd, a, q, a, e][c](b)] = n;
+						d[[s, a, Jd, a, yd][c](b)] = t;
+						d[[jh, a, lf, a][c](b)] = r;
+						d[[cb, a, q][c](b)] = A;
+						d[[I, a, Oa][c](b)] = L;
+						d[[wd, a, q][c](b)] = u;
+						d[[Kd, a, Oa][c](b)] = x;
+						return d
+					} ({},
+					function() {
+						var d = Qc[[B, a, hc, a, ca, a, kf, a][c](b)]([Q, f, u, a, la, a, s][c](b));
+						d[[e, a, aa][c](b)] > r && (ja(tb), w[[mb, a, jb][c](b)](d,
+						function() {
+							R(tb)
+						}));
+						n[[v, a, Mb][c](b)]();
+						ja(Qc)
+					},
+					function() {
+						R(Qc)
+					},
+					function(d) {
+						if (!n[[O, a, u][c](b)]) {
+							var k = n[[l, vd][c](b)] = [];
+							n[[O, a, u][c](b)] = D;
+							n[[Y, a, Da, a][c](b)] = r;
+							n[[oc, a, I, a, pc][c](b)] = [];
+							var g = n[[a, e][c](b)] = G([rd, a, e, f, e, a, q, a, e, f, sd, a, T][c](b)); [Ea, a, l, Fg, a, s][c](b) in g[[$, a][c](b)] && sb(g, [rd, a, e, f, e, a, q, a, e, f, sd, a, T, f, Gg][c](b));
+							var p = r,
+							m = lb[[$a, a, pb, a, Md, a, ca, a, T][c](b)](Nd),
+							y = G([t, a, bh, a, f, e, a, q, a, e][c](b))[[ga, a, va][c](b)];
+							d = n[[hb, a, Jg][c](b)] = d;
+							var w = tc,
+							Wa = n[[hb, a, Pd, a, qd, a][c](b)] = w * ta;
+							n[[uc, a, v][c](b)] = C[[Wb, a, Mg][c](b)](d / Wa);
+							for (Wa = Z[[B, a, t][c](b)](); p < d;) {
+								var z = p + x;
+								m[[ga, a, va][c](b)] = Ph(y,
+								function(a, b, c) {
+									a[I] = b;
+									a[Ia] = c;
+									return a
+								} ({},
+								z, p <= Wa ? b: [f, gb, a][c](b)));
+								var z = m[[pd, a, v][c](b)][r],
+								A = p % w,
+								L = C[K](p / w),
+								A = C[K](L / ta) * fb + A * (cf + kb) + ta,
+								L = L % ta * (Lg + Wd) + ta;
+								Ka(z[[$, a][c](b)],
+								function(d, f, g) {
+									d[[e, a, xa][c](b)] = f;
+									d[Eb] = g;
+									return d
+								} ({},
+								A + nc, L + nc));
+								z[I] = p;
+								g[[Ab, a, Bb][c](b)](z);
+								k[oa](z); ++p
+							}
+							U(g, Qa,
+							function(d) {
+								La(d);
+								Ma(d);
+								for (d = d[[mc, a, t][c](b)]; D;) if (d !== g && d) if (Ua(d, [l, H, f, e, a, q, a, e][c](b))) {
+									if (d[I] <= Z[[B, a, t][c](b)]()) h[P](d[I]);
+									break
+								} else d = d[[Ze, a, th, a][c](b)];
+								else break
+							});
+							var k = n[od] = G([l, H, f, Rd, f, e, a, xa][c](b)),
+							p = n[Vd] = G([l, H, f, Rd, f, lc][c](b)),
+							Za = r,
+							Xa;
+							U(k, [ic, a, jc, F, kc][c](b),
+							function(d) {
+								var e = d[[rc, a][c](b)];
+								if (!Xa) Xa = e;
+								else if (Xa !== e) return;
+								e = sa[X]();
+								e - Za > fb && (Za = e);
+								La(d);
+								Ma(d);
+								n[[cb, a, q][c](b)]()
+							});
+							U(p, [ic, a, jc, F, kc][c](b),
+							function(d) {
+								var e = d[[rc, a][c](b)];
+								if (!Xa) Xa = e;
+								else if (Xa !== e) return;
+								e = sa[X]();
+								e - Za > fb && (Za = e);
+								La(d);
+								Ma(d);
+								n[[I, a, Oa][c](b)]()
+							});
+							n[[v, a, Mb][c](b)]()
+						}
+					},
+					function() {
+						var d = n[od],
+						e = n[Vd],
+						g = [Ca, a, Ha, y, Q, y, l, H, f, nd, J, eb][c](b),
+						h = [Ca, a, Ha, y, Q, y, l, H, f, nd, f, gb, a, J, eb][c](b);
+						n[[wd, a, q][c](b)]() ? d[E] !== g && (d[E] = g) : d[E] !== h && (d[E] = h);
+						n[[Kd, a, Oa][c](b)]() ? e[E] !== g && (e[E] = g) : e[E] !== h && (e[E] = h)
+					},
+					function(d) {
+						d = C[Hb](r, C[Cb](n[[uc, a, v][c](b)] - x, d));
+						d !== n[[Y, a, Da, a][c](b)] && (n[[a, e][c](b)][[$, a][c](b)][[e, a, xa][c](b)] = f + d + Dh, n[[Y, a, Da, a][c](b)] = d, n[[v, a, Mb][c](b)](), N(n[[oc, a, I, a, pc][c](b)],
+						function(a) {
+							a(d)
+						}))
+					},
+					function(d) {
+						var e = n[[hb, a, Pd, a, qd, a][c](b)];
+						d = C[K](d / e);
+						n[Fb](d)
+					},
+					function() {
+						var d = n[[l, vd][c](b)],
+						k = Z[[B, a, t][c](b)](),
+						g = [Ca, a, Ha, y, Q, y, l, H, f, e, a, q, a, e, J, eb][c](b),
+						h = [Ca, a, Ha, y, Q, y, l, H, f, e, a, q, a, e, f, gb, a, J, eb][c](b),
+						m = [l, H, f, e, a, q, a, e, f, gb, a][c](b),
+						s = [l, H, f, e, a, q, a, e, f, Q, f, gb, a][c](b),
+						u = [l, H, f, e, a, q, a, e, f, Y, a, T][c](b);
+						N(d,
+						function(d, e) {
+							var f = d[[pd, a, v][c](b)][r],
+							l = e === k;
+							e < k || l ? (l ? sb(d, u) : Va(d, u), Va(d, m), Va(f, s), f[E] !== g && (f[E] = g)) : (Va(d, u), sb(d, m), sb(f, s), f[E] !== h && (f[E] = h))
+						})
+					},
+					function(d) {
+						n[[oc, a, I, a, pc][c](b)][oa](d)
+					},
+					function() {
+						n[Fb](n[[Y, a, Da, a][c](b)] - x)
+					},
+					function() {
+						n[Fb](n[[Y, a, Da, a][c](b)] + x)
+					},
+					function() {
+						return n[[Y, a, Da, a][c](b)] !== r
+					},
+					function() {
+						var d = n[[uc, a, v][c](b)];
+						return d !== x && n[[Y, a, Da, a][c](b)] < d - x
+					}),
+					h = function(d, f, g, h, l, m, n, r, s, A, u, x, z) {
+						d[[v, a, da][c](b)] = f;
+						d[[e, a, q, a, e][c](b)] = g;
+						d[[ha, a, Ga][c](b)] = h;
+						d[ra] = l;
+						d[[a, W][c](b)] = m;
+						d[ma] = n;
+						d[O] = r;
+						d[Bc] = s;
+						d[[v, a, t][c](b)] = A;
+						d[[B, a, t][c](b)] = u;
+						d[P] = x;
+						d[yb] = z;
+						return d
+					} ({},
+					Od, r, r,
+					function(d, f, g, h, l, m, n) {
+						d[[e, a, q, a, e][c](b)] = f;
+						d[[v, a, da][c](b)] = g;
+						d[db] = h;
+						d[[xb, a, v][c](b)] = l;
+						d[bb] = m;
+						d[[Ac, a, Ib][c](b)] = n;
+						return d
+					} ({},
+					r, Od, r, r, r, r),
+					function(d, f, g, h, m, n, q, r) {
+						d[e] = f;
+						d[s] = g;
+						d[[l, wa][c](b)] = h;
+						d[[gc, a][c](b)] = m;
+						d[[l, kd][c](b)] = n;
+						d[id] = q;
+						d[[ha, a, Ga][c](b)] = r;
+						return d
+					} ({},
+					G([M, a, f, qb, f, e, a, xa][c](b)), G([M, a, f, qb, f, lc][c](b)), G([wc, a, ba, f, l, wa][c](b)), G([l, H, f, M, a, f, gc, a][c](b)), G([l, H, f, M, a, f, s, a, hd][c](b)), G([ea, f, gh][c](b)), G([wc, a, ba, f, ha, a, Ga][c](b))), {},
+					function() {
+						function d(d) {
+							La(d);
+							Ma(d);
+							var e = d[[rc, a][c](b)];
+							if (!B) B = e,
+							qc(function() {
+								g(B)
+							});
+							else if (B !== e) return;
+							if (h[[P, a, u][c](b)] && (e = sa[X](), !(e - C < fb))) {
+								C = e;
+								d = d[[mc, a, t][c](b)];
+								var k;
+								if (d && (k = d[[wa, a, Ia][c](b)])) k[Gb] || (N(k[[a, W][c](b)],
+								function(d) {
+									sb(d, [M, a, f, qb, f, wa, a, Ia, f, Cg][c](b))
+								}), k[Gb] = D, h[Bc](D));
+								else h[Bc](z)
+							}
+						}
+						function k(d, f) {
+							K[oa](function(d, f, g) {
+								d[[a, e][c](b)] = f;
+								d[Td] = g;
+								return d
+							} ({},
+							d, f));
+							U(d, E[c](F), f, z)
+						}
+						function g(d) {
+							N(E,
+							function(f) {
+								f !== d && N(K,
+								function(d) {
+									Ec(d[[a, e][c](b)], f, d[Td], z)
+								})
+							})
+						}
+						function p(d, g, h) {
+							k(d,
+							function(k) { (k = k[[mc, a, t][c](b)]) && k[[Ke, a][c](b)][[Je, a, ih, a][c](b)]() === Q && (Ua(k, [l, H, f, ea, f, e, a, xa][c](b)) || Ua(k, [l, H, f, ea, f, Wb, a, T, a, s][c](b)) ? g(d) : Ua(k, [l, H, f, ea, f, lc][c](b)) && h(d))
+							})
+						}
+						if (!h[[O, a, u][c](b)]) {
+							h[[O, a, u][c](b)] = D;
+							var w = h[[a, W][c](b)];
+							N(h[ra],
+							function(d, e) {
+								w[e] = G([wc, a, ba, f][c](b) + e);
+								h[[v, a, t][c](b)](e, d, D)
+							});
+							var C = r,
+							B, E = [kc, [ic, a, jc][c](b)],
+							K = [];
+							k(w[e], d);
+							k(w[s], d);
+							p(Pb,
+							function() {
+								h[P](h[[e, a, q, a, e][c](b)] + x)
+							},
+							function() {
+								Ja[[cc, a][c](b)]()
+							});
+							p(Qb,
+							function() {
+								h[P](h[[e, a, q, a, e][c](b)])
+							},
+							function() {
+								Ja[[cc, a][c](b)]()
+							});
+							p(Lc,
+							function() {
+								Ja[[cc, a][c](b)]()
+							});
+							U(w[[l, kd][c](b)], Qa,
+							function(d) {
+								La(d);
+								Ma(d);
+								n[[s, a, Jd, a, yd][c](b)]();
+								h[yb]();
+								n[rb]();
+								R(Rc);
+								R(Pc);
+								Ta([[m, Ra, a, T][c](b), [l, H, m, s, a, hd, m, Qa, a, u][c](b), [V, a, I, a, m, e, a, q, a, e, m, rb][c](b)])
+							});
+							U(w[[gc, a][c](b)], Qa,
+							function(d) {
+								La(d);
+								Ma(d);
+								Xb[[Gd, a, la][c](b)] = [$c, Na, y, y, xh, J, $b, a, l, Zb, J, Kb, y, M, a, y, Lb, la, ac, ca, a, xd, a, zh, fa][c](b)
+							})
+						}
+					},
+					function(d) {
+						var e = h[ra],
+						f = e[bb];
+						if (d) {
+							if (f += x, h[[v, a, t][c](b)](bb, f), Ub) try {
+								Ub[[Yc, a][c](b)](),
+								Ub[[Y, a, de, a][c](b)] = r,
+								Ub[bc]()
+							} catch(l) {}
+						} else {
+							if (Vb) try {
+								Vb[[Yc, a][c](b)](),
+								Vb[[Y, a, de, a][c](b)] = r,
+								Vb[bc]()
+							} catch(m) {}
+							h[[ha, a, Ga][c](b)] += kb;
+							var n = h[[a, W][c](b)][[ha, a, Ga][c](b)];
+							n[[ib, a][c](b)] === z && (R(n), n[[Ge, a, Ie][c](b)]);
+							ja(n);
+							n[[ib, a][c](b)] = z;
+							me(h[[ha, a, ed][c](b)]);
+							h[[ha, a, ed][c](b)] = qc(function() {
+								n[[ib, a][c](b)] = D;
+								R(n)
+							},
+							cd)
+						}
+						d = e[[xb, a, v][c](b)] + x;
+						h[[v, a, t][c](b)]([xb, a, v][c](b), d);
+						h[[v, a, t][c](b)]([Ac, a, Ib][c](b), za(f, d))
+					},
+					function(d, e, f) {
+						var m = h[ra],
+						n = h[[a, W][c](b)];
+						if (f || e !== m[d]) m[d] = e,
+						n[d][[ga, a, va][c](b)] = Fc(e),
+						d === [v, a, da][c](b) && (n[[l, wa][c](b)][[$, a][c](b)][Db] = za(e, h[[v, a, da][c](b)]))
+					},
+					function(a) {
+						return h[ra][a]
+					},
+					function(d) {
+						if (!h[[P, a, u][c](b)]) {
+							h[[ha, a, Ga][c](b)] = r;
+							h[[e, a, q, a, e][c](b)] = d;
+							var k = h[[a, W][c](b)],
+							g = k[e],
+							l = k[s];
+							g[[ga, a, va][c](b)] = l[[ga, a, va][c](b)] = b;
+							var y = h[[v, a, da][c](b)];
+							h[[v, a, t][c](b)]([v, a, da][c](b), y);
+							h[[v, a, t][c](b)]([e, a, q, a, e][c](b), d + x);
+							N([db, [xb, a, v][c](b), bb, [Ac, a, Ib][c](b)],
+							function(d) {
+								h[[v, a, t][c](b)](d, r)
+							});
+							h[[P, a, u][c](b)] = D;
+							R(Qb);
+							R(Pb);
+							var E = k[id];
+							R(E);
+							ja(tb);
+							var H = [yg, F][c](b) + (d + x) + [F, xg][c](b);
+							Ja[[Jb, a, zb][c](b)](function(d, e, f) {
+								d[[u, a, V][c](b)] = e;
+								d[[Nb, a][c](b)] = f;
+								return d
+							} ({},
+							H, H));
+							w[ka](d,
+							function(D, H) {
+								R(tb);
+								if (D && H[[e, a, aa][c](b)] > r) {
+									var A = H[r],
+									L = A[e],
+									J = A[s],
+									K = A[Ea],
+									O = A[qa],
+									S = A[u];
+									h[ma] = A;
+									var U = S[[e, a, aa][c](b)];
+									h[[v, a, t][c](b)](db, U);
+									N(S,
+									function(d) {
+										d[Gb] = z;
+										var h = d[[a, W][c](b)] = [];
+										N([g, l],
+										function(g) {
+											var k = lb[[$a, a, pb, a, Md, a, ca, a, T][c](b)](Nd);
+											k[[Ba, a][c](b)] = [M, a, f, qb, f, wa, a, Ia][c](b);
+											k[[wa, a, Ia][c](b)] = d;
+											var l = Ka,
+											m = k[[$, a][c](b)],
+											n = {},
+											p = za(d[e], K),
+											q = za(d[Ea], K),
+											r = za(d[t], O),
+											s = za(d[qa], O);
+											n[[e, a, xa][c](b)] = p;
+											n[Db] = q;
+											n[Eb] = r;
+											n[[qa, a, Ob][c](b)] = s;
+											l(m, n);
+											h[oa](k);
+											g[[Ab, a, Bb][c](b)](k)
+										})
+									});
+									J[[Ba, a][c](b)] = L[[Ba, a][c](b)] = [M, a, f, qb, f, Q][c](b);
+									g[[Ab, a, Bb][c](b)](L);
+									l[[Ab, a, Bb][c](b)](J);
+									R(Pc);
+									n[[ib, a][c](b)]();
+									ja(Rc);
+									var Y = sa[X]();
+									h[hb] = Vf(function() {
+										if (h[[B, a, t][c](b)](bb) >= h[[B, a, t][c](b)](db)) {
+											var g = d + x,
+											l = g >= w[[e, a, q, a, W][c](b)];
+											Z[[v, a, t][c](b)](g);
+											h[yb]();
+											qc(function() {
+												N([function(a, b, c) {
+													a[ia] = b;
+													a[q] = c;
+													return a
+												} ({},
+												[ea, f, ua, a, ba, f, e, a, q, a, e][c](b), d + x),
+												function(a, b, c) {
+													a[ia] = b;
+													a[q] = c;
+													return a
+												} ({},
+												[ea, f, ua, a, ba, f, db][c](b), U),
+												function(a, b, c) {
+													a[ia] = b;
+													a[q] = c;
+													return a
+												} ({},
+												[ea, f, ua, a, ba, f, v, a, da][c](b), C[Hb](r, y - h[[B, a, t][c](b)]([v, a, da][c](b))))],
+												function(d) {
+													var e = d[ia],
+													f = k[e];
+													f || (f = k[e] = G(e));
+													f[[ga, a, va][c](b)] = Fc(d[q])
+												});
+												ja(E);
+												l ? ja(Lc) : ja(Pb)
+											},
+											cd);
+											Ta([[m, Ra, a, T][c](b), [V, a, I, a, m, M, a, m, a, ab, m, ua, a, ba][c](b), [M, a, m, a, ab, m, ua, a, ba, m][c](b) + (d + x)]);
+											g = l ? Ce: [Be, F][c](b) + (d + x) + [F, ug][c](b);
+											Ja[[Jb, a, zb][c](b)](function(d, e, f) {
+												d[[u, a, V][c](b)] = e;
+												d[[Nb, a][c](b)] = f;
+												return d
+											} ({},
+											g, g));
+											w[ka](d + x)
+										} else if (g = (sa[X]() - Y) / Ae + h[[ha, a, Ga][c](b)], g >= y) h[[v, a, t][c](b)]([v, a, da][c](b), r),
+										h[yb](),
+										ja(E),
+										ja(Qb),
+										Ta([[m, Ra, a, T][c](b), [V, a, I, a, m, M, a, m, a, ab, m, ob, a, u][c](b), [M, a, m, a, ab, m, ob, a, u, m][c](b) + (d + x)]),
+										g = [ze, F][c](b) + (d + x) + [F, pg][c](b),
+										Ja[[Jb, a, zb][c](b)](function(d, e, f) {
+											d[[u, a, V][c](b)] = e;
+											d[[Nb, a][c](b)] = f;
+											return d
+										} ({},
+										g, g)),
+										w[ka](d + x);
+										else h[[v, a, t][c](b)]([v, a, da][c](b), C[Hb](r, y - C[xe](g)))
+									},
+									dd);
+									Ta([[m, Ra, a, T][c](b), [V, a, I, a, m, M, a, m, P, m, ua, a, ba][c](b), [M, a, m, P, m, ua, a, ba, m][c](b) + (d + x)])
+								} else if (Ta([[m, Ra, a, T][c](b), [V, a, I, a, m, M, a, m, P, m, ob, a, u][c](b), [M, a, m, P, m, ob, a, u, m][c](b) + (d + x)]), le([we, F, og, Lb][c](b))) Xb[[s, a, ka][c](b)]()
+							})
+						}
+					},
+					function() {
+						var d = h[ma][[wa, a, Ia][c](b)];
+						d && (d = d[[a, W][c](b)]) && (d[[e, a, aa][c](b)] = r);
+						Uf(h[hb]);
+						h[[P, a, u][c](b)] = z
+					});
+					h[O]();
+					Z[O]();
+					w[O]();
+					var ub = Z[[B, a, t][c](b)](),
+					Sb = ub >= w[[e, a, q, a, W][c](b)];
+					Sb && (ub = r);
+					var ie = z,
+					Oc = G([$d, f, ha, a, re, a, T][c](b)),
+					Nc = z;
+					w[ka](ub,
+					function(d, e) {
+						Nc = D;
+						Rb();
+						Sb || N(je,
+						function(d) {
+							Ua(d, [Q, f, u, a, la, a, s][c](b)) && (d[E] = d[[B, a, Zc, l, zc, a][c](b)]([m, E][c](b)), d[[s, a, fc, a, wh, l, zc, a][c](b)]([m, E][c](b)), Mc(d,
+							function() {
+								Va(d, [Q, f, u, a, la, a, s][c](b))
+							},
+							Sa))
+						})
+					});
+					var he = z,
+					je = lb[[B, a, hc, a, ca, a, kg, a][c](b)](Q),
+					ke = ee(je,
+					function(d) {
+						if (Ua(d, [Q, f, u, a, la, a, s][c](b))) if (Sb) d[E] = d[[B, a, Zc, l, zc, a][c](b)]([m, E][c](b)),
+						Mc(d,
+						function() {
+							Va(d, [Q, f, u, a, la, a, s][c](b))
+						});
+						else return z;
+						return D
+					}),
+					ge = ke[[e, a, aa][c](b)] + x;
+					Oc[[ga, a, va][c](b)] = za(kh, ge);
+					var fe = r;
+					w[[mb, a, jb][c](b)](ke,
+					function() {
+						he = D;
+						Rb()
+					},
+					function() {++fe;
+						Rb()
+					});
+					Rb();
+					var Vb, vb, Ub;
+					U(Tb, Qa,
+					function(d) {
+						La(d);
+						Ma(d);
+						R(Pc);
+						R(Rc);
+						n[rb]();
+						Ta([[m, Ra, a, T][c](b), [l, H, m, P, m, Qa, a, u][c](b), [V, a, I, a, m, e, a, q, a, e, m, rb][c](b)])
+					});
+					if ((Tb = na[[gg, a][c](b)]) && Tb[Xc]) Tb[Xc](hh, [qe, f, ud, a, Na, fg, Pa, Ah, Na, s, a, u][c](b))
+				})(window, LBShare)
+			})("c", "R", confirm, "", "join", clearTimeout, location, isNaN, "cr", parseInt, localStorage, "now", Math, Boolean, JSON, "und", "push", encodeURIComponent, Object, "r", "b", "num", "font", "log", !0, !1, "paus", "ao", "li", "=", "actionnam", "tAttri", "gif", ".", "infoc", "/", "rc", "com", "ijinshan", "play", ":", "http", "auto", "&", "audio", "src", "mp", "Audio", "xt", "\u56fe\u7247\u83b7\u53d6\u5931\u8d25,", "round", "op", "\u82f1\u96c4\u96be\u8fc7\u7f8e\u4eba\u5173\uff01\u6211\u6311\u6218\u7b2c", "chang", 1E3, "onr", "\u82f1\u96c4\u96be\u8fc7\u7f8e\u4eba\u5173\uff01\u6211\u5df2\u8fc7", "\u82f1\u96c4\u96be\u8fc7\u7f8e\u4eba\u5173\uff01\u6211\u662f\u9738\u6c14\u4fa7\u6f0f\u7684\u5927\u82f1\u96c4\uff0c\u5168\u90e8\u901a\u5173\u4e86\uff01", 500, 200, "T", "nd", "naltyIt", "pars", "json", "cli", "valid", "Not", "ntWidth", "callShar", "toLow", "rty", "tagNam", "classList", "add", "classNam", "contains", "split", "mov", "styl", "display", "turn", "dlgMask", "ntList", "ack", "Ev", "mor", "ntD", "founds", "pr", "tri", "stopPropagation", "lBu", "diff", "ntById", "m", "tEl", "stop", "cs", "<", "ann", ";", "foot", "quot", "pos", "lt", "gt", "toFix", "cursor", "scrollTo", "Data", "mous", "down", "don", "touchstart", "right", "sc", "png", "icon", "img", "cL", "ass", "\u82f1\u96c4\u96be\u8fc7\u7f8e\u4eba\u5173", "par", "targ", "app", "ndChild", 320, 412, "%", 100, "dlg", "childNod", "inactiv", "congrats", 20, "rPag", "it", "pan", "min", "cont", 2, 12, 0.8, "width", "h", "top", "list", "rs", "px", "nt", "ntEl", "curr", 16, 15, "siz", "ntationchang", "ori", "ntPag", "tn", "tns", "ntsByClassNam", "canPr", "init", "Chang", "ir", "sh", "go", "hid", "compl", "load", "Start", "sOnLoad", "K", "ls", 46, "atch", 5, "as", "not", "found", "S", "gc", "9", 81, "3", 106, 114, 27, "i", "ww", "tp", "ht", "$", "m)", "co", "da", "ud", "90", "qc", "24", "d|", "cl", "+q", "\\", "216", "(", "+\\", "^\\", "location", "hostnam", "^[", "\u82f1\u96c4\u96be\u8fc7\u7f8e\u4eba\u5173\uff0c\u5c0f\u4f19\u4f34\u5feb\u6765\u6311\u6218\u5427\uff01", clearInterval, "data", "e", "6", setInterval, "E", "\\d", "g", setTimeout, "xp", "tTim", "226ff", "lo", String, "+)", "2a", "d", "fin", "ngth", "hr", Image, document, "w", "c4", "2", Date, 0, 3, "50px", "consol", 68.2, "_", 116, 190, "ntsByTagNam", "click", "tjw", "loop", "typ", "valu", 55, "Typ", "\u662f\u5426\u5237\u65b0\u9875\u9762", "\u5173\u5931\u8d25\uff0c\u5feb\u6765\u5e2e\u5e2e\u6211", "x", "ind", "8", "slic", "GET", "adystat", "4", "\u5173\uff0c\u4f60\u80fd\u8fc7\u51e0\u5173\uff1f", "girls", "imag", "adyStat", 4, "max", "\u5173\uff0c\u5feb\u6765\u56f4\u89c2", "\u82f1\u96c4\u96be\u8fc7\u7f8e\u4eba\u5173\uff01\u6211\u6b63\u5728\u6311\u6218\u7b2c", "s", "ct", "fr", "nzhaocha", "trackEv", "j", "canN", "y", "gam", "o", "docum", "pick", "lock", "v", "rH", "kitFilt", "transition", "El", "div", "turnValu", "canc", "mCount", 60, "inn", "msP", "rWidth", 22.7, "pag", "il", '"', "ss", "-", "fail", "contain", "nalty", "'", "amp", "apos", "string", "cussor", "plac", "updat", "imgUrl", "rv", "Jump", "62dc", "cn", "|(", "showAd", "4c24", "ou", "rShowOps", ">", null, "65", "p", "f", "succ", "a5", "rHTML", "mplat", "floor", XMLHttpRequest, "ar", "l", "addEv", "non", "am", "progr", "ft", "mask", "%c\u730e\u8c79\u79fb\u52a8\u539f\u521b\u6e38\u620f\n\u7248\u6743\u6240\u6709\uff0c\u8bf7\u52ff\u6284\u88ad", "fn", "hasOwnProp", "rCas", 1, "k", "onPag", "7", 0.5, "fc546", " ", "?", "status", 166, "tBtn", "dc", 40, "spons", "t", "invalid", "php", "n", "sourc", 6, "titl", "cR", "ts", "ntNod", "at", "autoplay", "\u5f15\u7206\u75af\u72c2\u8f6c\u53d1\u7684\u6e38\u620f", 10, "ut", "goL", "Attri", "corr", "www", "st", "a", "nguan", "start", "fault", "pic", "ys", "loading", "color", 159, "5", "00%", "f2", "]", "ad", "ight", "tap", "fontSiz", 178, "prototyp", 158, "tIt", "show", "1", "rror", "config", "ntTim");
+		</script>
+	</body>
+
+</html>
