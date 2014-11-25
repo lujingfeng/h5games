@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Smarty Bubbles</title>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.01, minimum-scale=1.0, user-scalable=no,width=device-width,minimal-ui" />
+		<meta name="format-detection" content="telephone=no">
+		<meta name="mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="apple-touch-icon-precomposed" sizes="57x57" href="icons/icon57.png">
+		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="icons/icon72.png">
+		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="icons/icon114.png">
+		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="icons/icon144.png">
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+		<link rel="icon" href="favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" href="css/styles.min.css" type="text/css" charset="utf-8"/>
+        
+        <meta name="baidu_union_verify" content="c3b082783afd9befba83340bc7b689ce">
+
+		<script>
+			function famobi_getUrlParams(a, b, c) {
+			    a = /[?&]?([^=]+)=([^&]*)/g, b = document.location && document.location.search ? document.location.search.split("+").join(" ") : "";
+			    for (var d = {}; c = a.exec(b);) d[decodeURIComponent(c[1])] = decodeURIComponent(c[2]);
+			    return d
+			}
+
+			function famobi_getUserLang() {
+			    var a = navigator.language.substr(0, 2);
+			    switch (a) {
+			        case "de":
+			        case "en":
+			        case "tr":
+			            return a;
+			        case "ch":
+			        case "at":
+			            return "de-de";
+			        default:
+			            return famobi_getUrlParams().locale || "us-en"
+			    }
+			}
+
+			window.famobi_gameJS = ["smartybubbles.min.js?1321", function(){
+				window.Smarty.run();
+			}];
+			window.famobi_gameID = "smarty-bubbles";
+            /*
+			(function (document, url, fgJS, firstJS) {
+				fgJS     = document.createElement('script');
+				firstJS  = document.getElementsByTagName('script')[0];
+				fgJS.src = url + encodeURIComponent(document.location.href);
+				firstJS.parentNode.insertBefore(fgJS, firstJS);
+			})(document, '/html5games/gameapi/v1.js?e=');
+			*/
+		</script>
+        
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-37154200-6', 'auto');
+          ga('send', 'pageview');
+
+          function gadown() {
+            ga('send', 'event', 'Resouce', 'Download');		
+          }
+          
+      </script>
+	</head>
+	<body>
+		<img id="logo" src="img/invisPreloadImage.png">
+	</body>
+	
+	<script type="text/javascript" src="js/script.js?13123423"></script>
+</html>

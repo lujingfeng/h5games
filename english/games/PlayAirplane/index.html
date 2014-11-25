@@ -1,0 +1,208 @@
+	<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta name="viewport" content="initial-scale=1, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0, width=device-width">
+        <meta charset="utf-8" />
+        <title>Aircraft Battle</title>
+        <meta content="Compete with Global Users.Global Trending Game" name="keywords">
+        <meta content="Compete with Global Users.Global Trending Game" name="description">
+        <link href="../../common.css" rel="stylesheet" type="text/css"></link>
+        <script type="text/javascript" src="jquery.js"></script>
+        <script>
+            document.oncontextmenu = function(e){
+                e.preventDefault();
+            }
+        </script>
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-37154200-6', 'auto');
+          ga('send', 'pageview');
+
+      </script>
+    </head>
+    <body>
+    
+        <div id="main">
+            <div style="display:none">
+            <img src="images/share-pic.png"></img>
+            </div>
+            <div id="container">
+                <div id="modal" class="hide">
+                    <div class="header">Global Rank</div>
+                    <div class="content">
+                       <div class="list">
+                       </div>
+                    </div>
+                    <div id="loading">
+                      <img src="images/loading.gif"></img>
+                    </div>
+                    <div class="footer">
+                        <button class="continue">Continue</button><button class="share" style="margin-left: 20px">Share</button>
+                    </div>
+                </div>
+                <div id="score"></div>
+                
+                <div id="share" style="display: none">
+                   <div class="header">
+                      Share
+                   </div>
+                   <div class="items">
+                      <div class="share-item facebook">
+                         <img src="images/facebook.jpg"></img>
+                      </div>
+                      <div class="share-item twitter">
+                         <img src="images/twitter.png"></img>
+                      </div>
+                   </div>
+                   <div style="text-align: center;">
+                      <button class="close" style="margin-top: 8px;">Close</button>
+                   </div>
+                </div>
+                <canvas height="800" width="480" id="game-box"></canvas>
+            </div>
+        </div>
+
+        <div class="back">
+          <a  href="javascript:history.back()">
+             <img src="../../images/ico-back.png"></img>
+          </a>
+            
+        </div>
+         <script type="text/javascript">
+            var gameId = "game14";
+            var hdom = document.querySelector(".heart-me .h");
+            
+            hdom.onclick = function(){
+               if(hdom.className && hdom.className.indexOf("red") > -1 ){
+                   hdom.className = hdom.className.replace("red");
+                   localStorage[gameId] = 0;
+               }else{
+                   hdom.className += " red";
+                   localStorage[gameId] = 1;
+               }
+            }
+            
+            if(localStorage[gameId] == 1){
+               var hdom = document.querySelector(".heart-me .h");
+               hdom.className += " red";
+            }else if(hdom.className){
+               hdom.className = hdom.className.replace("red");
+            }
+            
+         </script>
+    </body>
+</html>
+    	<style>*{box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box}body{margin:0;padding:0;font-size:14px;color:#333;font-family:"Microsoft YaHei",sans-serif,'Microsoft Sans Serif','Microsoft JhengHei UI'}#main{width:480px;margin:0 auto}#container{width:480px;max-height:800px;margin:0 auto;position:relative}#container canvas{position:absolute;z-index:1000}#container canvas.playing{cursor:none}#score{font-size:32px;width:100%;top:10px;padding-left:20px;position:absolute;z-index:1001}
+        
+        body{
+          -webkit-user-select: none;
+        }
+        #loading{
+          position: absolute;
+          left: 50%;
+          margin-left: -18px;
+          top: 50%;
+          margin-top: -18px;
+          display: none;
+        }
+        .items{
+           text-align: center;
+           height: 130px;
+           border-top: #666 solid 2px;
+           border-bottom: #666 solid 2px;
+           padding-top: 15px;
+           
+        }
+        
+        .share-item{
+           display:inline-block;
+           border-radius: 15px;
+           margin-left: 10px;
+           
+        }
+        
+        #modal{
+           width:400px;
+           height:500px;
+           top:100px;
+           left:50%;
+           margin-left:-200px;
+           border:#666 solid 2px;
+           border-radius:8px;
+           position:absolute;
+           font-size:20px;
+           background-color:#ddd;
+           z-index:1002
+        }
+        
+        #share{
+           width:300px;
+           height: 232px;
+           top:150px;
+           left:50%;
+           margin-left:-150px;
+           border:#666 solid 2px;
+           border-radius:8px;
+           position:absolute;
+           font-size:20px;
+           background-color:#ddd;
+           z-index:1002
+        }
+        #share .header{
+           height: 50px;
+           text-align: center;
+           line-height: 50px;
+        }
+           
+           @media screen and (max-width:480px){#main,#container{width:100%}#modal{width:94%;top:10px;left:3%;margin:0}}#modal.hide{display:none}#modal .header{height:45px;line-height:45px;font-weight:bold;text-align:center;border-bottom:#666 solid 2px}#modal .content{background: #eee;height:398px;line-height:210px;font-weight:bold;text-align:center;overflow: auto;}#modal .footer{height:45px;line-height:45px;text-align:center;border-top:#666 solid 2px}
+        button{
+           width:120px;
+           height:30px;
+           border:#666 solid 2px;
+           border-radius:15px;
+           font-size:15px;
+           font-weight:bold;
+           color:#333;
+           cursor:pointer;
+        }
+        
+        .list-item{
+           line-height: 50px;
+           text-align: left;
+           margin-left: 34px;
+           font-weight: normal;
+        }
+        
+        .list-item .right{
+           display: inline-block;
+           width: 296px;
+           font-weight: normal;
+           font-size: 17px;
+        }
+        
+        .list-item .right span{
+          display: inline-block;
+        }
+        
+        .list-item .rank{
+          vertical-align: top;
+          display: inline-block;
+          width: 37px;
+        }
+        
+        .list-item .name{
+          float: left;
+        }
+        
+        .list-item .score{
+          float: right;
+        }
+        
+        </style>
+	    <script src="game.js?v7"></script>		
+<!-- Generated by RunJS (Sat Aug 23 00:10:31 CST 2014) 0ms -->

@@ -1,0 +1,46 @@
+// JavaScript Document
+Imperial Palace十分便民//参考图片bg.jpg
+Catch me if you can!自从得了神经病,整个人精神多了~//参考图片bg.jpg
+Normal 经典模式
+Veteran 基友模式
+Catch Genie 围住神经猫
+Click to get more!点击这里还有更多!
+Retry 再来一次
+Share 通知好友
+Genie Escaped!你让它跑啦!
+
+God Controller 塞外高手 
+Terminator 神精病博士 
+Doctor X 神经大神 
+I Am Real Genie 你是我的小苹果 
+Super Aladdin 院长派来的救兵 
+Ringmaster 精神病院长 
+Jasmine 汝甚叼令尊知否 
+The Sultan 传说中的高手 
+Nobody 笑而不语 
+Blue Princess 白天睡觉喵 
+Merchant隔壁王伯伯
+Lazy Butler 神经大条 
+Greedy Minister 我是处女座的 
+Brave Soldier 停不下来  
+Ruthless Lover 喵了个咪的 
+Crazy Robber M78星人 
+Fuddy-duddy凤姐夫
+Jasmine 扫地僧 
+Evil Magician风骚的少年
+
+You've caught Genie in 13 steps 您用13步抓住了神经猫
+Global Rank: 421 神经全国排名421位
+Defeated 80% Genie Catchers in the world 击败了精神病院80%的精神病患者
+Title: 获得称号：思维广
+You've caught Genie and Nigie in {0} steps 您用{0}步抓住了神经猫和他的好基友
+Global Rank: {0}神经全国排名{0}位
+Defeated {0} % Genie Catchers in the world 击败了精神病院{0}的精神病患者
+Title: 获得称号：
+
+Genie and Nigie has ESCAPED!你没有抓住神经猫和他的好!基!友!
+Invite more Catchers for help! 精神病院长又发神经病了！
+You didn't catch Genie in {0} steps 您用{0}步都没有抓住神经猫
+
+
+Genie has ESCAPED!你没有抓住神！经！猫！！

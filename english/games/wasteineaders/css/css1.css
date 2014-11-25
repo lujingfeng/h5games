@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"> <html><head> <meta http-equiv="Content-Type" CONTENT="text/html; charset=utf-8"> <title>错误: 您所请求的网址（URL）无法获取</title> <style type="text/css"><!--   /*
+ Stylesheet for Squid Error pages
+ Adapted from design by Free CSS Templates
+ http://www.freecsstemplates.org
+ Released for free under a Creative Commons Attribution 2.5 License
+*/
+
+/* Page basics */
+* {
+	font-family: verdana, sans-serif;
+}
+
+html body {
+	margin: 0;
+	padding: 0;
+	background: #efefef;
+	font-size: 12px;
+	color: #1e1e1e;
+}
+
+/* Page displayed title area */
+#titles {
+	margin-left: 15px;
+	padding: 10px;
+	padding-left: 100px;
+	background: url('http://www.squid-cache.org/Artwork/SN.png') no-repeat left;
+}
+
+/* initial title */
+#titles h1 {
+	color: #000000;
+}
+#titles h2 {
+	color: #000000;
+}
+
+/* special event: FTP success page titles */
+#titles ftpsuccess {
+	background-color:#00ff00;
+	width:100%;
+}
+
+/* Page displayed body content area */
+#content {
+	padding: 10px;
+	background: #ffffff;
+}
+
+/* General text */
+p {
+}
+
+/* error brief description */
+#error p {
+}
+
+/* some data which may have caused the problem */
+#data {
+}
+
+/* the error message received from the system or other software */
+#sysmsg {
+}
+
+pre {
+    font-family:sans-serif;
+}
+
+/* special event: FTP / Gopher directory listing */
+#dirmsg {
+    font-family: courier;
+    color: black;
+    font-size: 10pt;
+}
+#dirlisting {
+    margin-left: 2%;
+    margin-right: 2%;
+}
+#dirlisting tr.entry td.icon,td.filename,td.size,td.date {
+    border-bottom: groove;
+}
+#dirlisting td.size {
+    width: 50px;
+    text-align: right;
+    padding-right: 5px;
+}
+
+/* horizontal lines */
+hr {
+	margin: 0;
+}
+
+/* page displayed footer area */
+#footer {
+	font-size: 9px;
+	padding-left: 10px;
+}
+  body :lang(fa) { direction: rtl; font-size: 100%; font-family: Tahoma, Roya, sans-serif; float: right; } :lang(he) { direction: rtl; float: right; }  --></style> </head><body> <div id="titles"> <h1>ERROR</h1> <h2>The requested URL could not be retrieved</h2> </div> <hr>  <div id="content"> <p>当尝试取回该 URL 时遇到下面的错误：<a href="http://fonts.googleapis.com/css?">http://fonts.googleapis.com/css?</a></p>  <blockquote id="error"> <p><b>连接到 173.194.72.95 失败。</b></p> </blockquote>  <p id="sysmsg">系统返回以下内容：<i>(101) Network is unreachable</i></p>  <p>The remote host or network may be down. Please try the request again.</p>  <p>缓存服务器的管理员 <a href="mailto:root?subject=CacheErrorInfo%20-%20ERR_CONNECT_FAIL&amp;body=CacheHost%3A%20localhost.localdomain%0D%0AErrPage%3A%20ERR_CONNECT_FAIL%0D%0AErr%3A%20(101)%20Network%20is%20unreachable%0D%0ATimeStamp%3A%20Thu,%2030%20Oct%202014%2008%3A29%3A21%20GMT%0D%0A%0D%0AClientIP%3A%20192.168.3.157%0D%0AServerIP%3A%20173.194.72.95%0D%0A%0D%0AHTTP%20Request%3A%0D%0AGET%20%2Fcss%3Ffamily%3DOrbitron%3A900%20HTTP%2F1.1%0AHost%3A%20fonts.googleapis.com%0D%0AConnection%3A%20keep-alive%0D%0ACache-Control%3A%20max-age%3D0%0D%0AAccept%3A%20text%2Fcss,*%2F*%3Bq%3D0.1%0D%0AUser-Agent%3A%20Mozilla%2F5.0%20(Windows%20NT%205.1)%20AppleWebKit%2F537.36%20(KHTML,%20like%20Gecko)%20Chrome%2F36.0.1985.143%20Safari%2F537.36%0D%0AReferer%3A%20http%3A%2F%2Fflashvhtml.com%2Fhtml%2F%0D%0AAccept-Encoding%3A%20gzip,deflate,sdch%0D%0AAccept-Language%3A%20zh-CN,zh%3Bq%3D0.8%0D%0A%0D%0A%0D%0A">root</a>.</p>  <br> </div>  <hr> <div id="footer"> <p>已由 localhost.localdomain (squid/3.1.10) 生成 Thu, 30 Oct 2014 08:29:21 GMT</p> <!-- ERR_CONNECT_FAIL --> </div> </body></html> 

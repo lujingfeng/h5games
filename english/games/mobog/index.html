@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Mysterious Genie2.0</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="Expires" content="0">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Cache-control" content="no-cache">
+  <meta http-equiv="Cache" content="no-cache">
+  
+  <meta property="fb:app_id" content="274758712646553" />
+  <meta property="og:site_name" content="Mysterious Genie 2.0" />
+  <meta property="og:title" content="Mysterious Genie 2.0" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="http://m.mobogenie.com/h5game/games/mobog/index.html" />
+  <meta property="og:image" content="http://m.mobogenie.com/h5game/games/mobog/images/genie_pic.jpg" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:description" content="Mysterious Genie2.0 Adventure！Dare you challenge me?" />
+  
+  <meta name="keywords" content="Mysterious Genie2.0 Adventure！Dare you challenge me?" >
+  <meta name="description" content="Mysterious Genie2.0 Adventure！Dare you challenge me?" >
+  
+  <!--<meta property="og:title" content="Mysterious Genie 2.0" />  
+  <meta property="og:url" content="http://m.mobogenie.com/h5game/games/mobog/index.html" />
+  <meta property="og:description" content="Mysterious Genie2.0 Adventure！Dare you challenge me?" /> 
+  <meta property="og:image" content="http://m.mobogenie.com/h5game/games/mobog/images/genie_pic.jpg" />
+  <meta property="og:site_name" content="Mysterious Genie 2.0"/>-->
+  
+  
+  <!--<meta property="og:type" content="article" />-->
+  
+  <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-37154200-6', 'auto');
+      ga('send', 'pageview');
+
+  </script>
+ 
+  
+  <link rel="stylesheet" type="text/css" href="common.css">
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/touch.js"></script>
+  <script type="text/javascript" src="js/game.js?898321"></script>
+  
+  <style>
+     body{
+       overflow: hidden;
+       text-align: left;
+       background: #eee;
+     }
+     
+     #game, #obstacles{
+        position: absolute;
+        left: 0;
+        top: 0;
+        overflow: hidden;
+     }
+     
+     
+     #start-pannel{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+     }
+     
+     #genie{
+        position: absolute;
+        width: 85px;
+        height: 127px;
+        overflow: hidden;
+        cursor:pointer;
+     }
+     #bottom{
+        position: absolute;
+        bottom: 20px;
+        width: 100%;
+        text-align: center;
+     }
+     #bottom .start{
+        width: 127px;
+        height: 43px;
+        display: inline-block;
+        border: none;
+        background: #00b4ff;
+        line-height: 43px;
+        font-size: 18px;
+        border-radius: 3px;
+        overflow: hidden;
+     }
+     
+     .start img{
+       width: 100%;
+       text-align: center;
+     }
+     
+     #start-pannel .hd{
+        height: 45px;
+        background: #fff;
+        text-align:center;
+        border-bottom: 1px solid #d8d8d8;
+     }
+     
+     
+     #start-pannel .md{
+       text-align:center;
+       background: #f6f6f6;
+     }
+     #start-pannel .ft{
+       border-top: 1px solid #d8d8d8;
+       height: 45px;
+       background: #e8e8e8;
+       text-align: center;
+       box-shadow: 0 1px 1px 1px rgba(0, 0, 0, .1);
+     }
+     
+     .init-panel{
+       position: absolute;
+       left: 0;
+       top: 0;
+       bottom: 90px;
+       width: 100%;
+       background: rgba(0, 0, 0, 0);
+     }
+     
+     #result{
+       position: absolute;
+       left: 0;
+       top: 0;
+       width: 100%;
+       height: 100%;
+     }
+     
+     #result .ctn{
+       position: absolute;
+       left: 20px;
+       right: 20px;
+       top: 50px;
+       height: 200px;
+       background: #fed827;
+       border-radius: 5px;
+       box-shadow: inset 0px 0px 5px rgba(255, 255, 190, .46), 0px 0px 3px rgba(0, 0, 0, .15);
+       -webkit-box-shadow: inset 0px 0px 5px rgba(255, 255, 190, .46), 0px 0px 3px rgba(0, 0, 0, .15);
+       -moz-box-shadow: inset 0px 0px 5px rgba(255, 255, 190, .46), 0px 0px 3px rgba(0, 0, 0, .15); 
+     }
+     
+     #result .ctn .bg{
+       position: absolute;
+       top: 10px;
+       left: 10px;
+       right:10px;
+       bottom:10px;
+       background: #e3fbff;
+       font-size: 12px;
+     }
+     
+     #result .ctn .bg p{
+       line-height: 30px;
+       text-indent: 10px;
+     }
+     
+     .share-btn {
+       display: inline-block;
+       width: 91px;
+       height: 31px;
+       vertical-align: middle;
+       margin-right: 10px;
+     }
+     
+     .share-btn img{
+       width: 100%;
+     }
+     
+     .share{
+       position: absolute;
+       bottom: 20px;
+       left: 20px;
+     }
+     .share .lb{
+       font-size: 12px;
+       margin-right: 14px;
+     }
+     
+     #result .title{
+       position: absolute;
+       left: 50%;
+       width: 184px;
+       margin-left: -92px;
+       top: -10px;
+     }
+     
+     #result .title img{
+       width: 100%;
+     }
+     
+     #user, #high{
+       color: #fcb711;
+       font-size: 20px;
+     }
+     
+     #loading{
+       position: absolute;
+       left: 0;
+       top:0;
+       width: 100%;
+       height: 100%;
+       background: #fff;
+     }
+     #loading p{
+       font-size: 20px;
+       line-height: 480px;
+       text-align:center;
+     }
+     
+     #container{
+        position: absolute;
+     }
+     
+     #continue{
+        -webkit-appearance: none;
+        border: none;
+        line-height: 30px;
+        width: 100px;
+        font-size: 16px;
+        background: #00abeb;
+        color: #fefefe;
+        border-radius: 4px;
+     }
+     
+     #more{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        line-height: 56px;
+        background: #a4ca3c;
+        color: #fff;
+        font-size: 20px;
+        font-weight: bold;
+        border-top: 1px solid #fff;
+        cursor: pointer;
+     }
+  </style>
+</head>
+<body>
+
+   <div id="container">
+      <img src="images/genie_pic.jpg" style="position: absolute;left:-10000px"></img>
+      <canvas id="game">
+         Your browser didn't support canvas!
+      </canvas>
+      
+      <canvas id="obstacles">
+      
+      </canvas>
+      
+      <div id="genie" style="display:none">
+         <img src="images/genie.png"></img>
+      </div>
+   
+      <div id="start-pannel">
+         <div id="bottom">
+            <span class="start">
+               <img src="images/button.jpg"></img>
+            </span>
+         </div>
+         <div class="init-panel">
+            <div class="hd">
+                <img src="images/logo.png" style="width: 120px;margin-top: 4px;"></img>
+            </div>
+            <div class="md">
+               <img src="images/initial.png" style="width: 260px">
+               </img>
+            </div>
+            <div class="ft">
+                <img src="images/jiantou.png" style="width: 30px;margin-top:11px;"></img>
+            </div>
+         </div>
+      </div>
+      
+      <div id="result" style="display:none">
+        <div class="ctn">
+            <div class="bg">
+            <p style="margin-top: 34px;">Dear Master,</p>
+            <p>we've achive <span id="high">0</span> m,</p>
+            <p>beaten <span id="user">0%</span> users all around the world</p>
+            </div>
+            
+            <div class="share"> 
+              <span class="lb">Share:</span>
+              <span class="share-btn fb"><img src="images/facebook.png"></img></span>
+              <span class="share-btn tw"><img src="images/twitter.png"></img></span>
+            </div>
+            <div class="title">
+              <img src="images/share.png"></img>
+            </div>
+        </div>
+        
+        <div style="position:absolute;width:100%;text-align: center;top: 300px">
+          <button id="continue">Retry</button>
+        </div>
+        
+        <div id="more">
+           MORE GAME
+        </div>
+     </div>
+     
+     <div id="loading" >
+        <p>Loading...</p>
+     </div>
+     
+     <div id="distance" style="position:absolute;left: 10px;top: 10px;display:none;font-size: 20px;color:#fff">
+        0
+     </div>
+   </div>
+   
+   <script>
+   
+      $(document).ready(function() {
+          $.ajaxSetup({ cache: false });
+         /*
+          $.getScript('//connect.facebook.net/en_UK/all.js', function(){
+               FB.init({
+                  appId: '298392267033415',
+               });  
+               
+               FB.ui({
+                  method: 'share_open_graph',
+                  action_type: 'og.likes',
+                  display: "popup",
+                  redirect_uri: "http://baidu.com",
+                  action_properties: JSON.stringify({
+                      object:'http://mobogenie.com',
+                  }),
+               }, function(response){});
+               
+          });
+          */
+        });
+        
+   </script>
+</body>
+</html>

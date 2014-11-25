@@ -1,0 +1,152 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head lang="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="user-scalable=no, width=device-width, maximum-scale=1">
+    <title>Death Shooter</title>
+    <link href="../../common.css" rel="stylesheet" type="text/css"></link>
+    <style>
+        body{
+            background-color: black;
+            margin: 0;
+        }
+    </style>
+    <link href="../../common.css" rel="stylesheet" type="text/css"></link>
+	<style>
+        html {
+            -ms-touch-action: none; /* Direct all pointer events to JavaScript code. */
+        }
+        .sbgshow{z-index:10000;display:block;position:fixed;top:0;left:0;width:100%;height:100%;text-align:center;color:#fff;font-size:30px;line-height:1.7em;background:rgba(0,0,0,0.85);}
+        .sbgshow .arron{z-index:10000; position:absolute;top:8px;right:8px;width:100px;height:100px;background:url(./img/arron.png) no-repeat; background-size:100px 100px;}
+        .sbgshow p{z-index:10000; padding-top:78px;}
+        .sbg{display:none; z-index:10000;  position:fixed;top:0;left:0;width:100%;height:100%;text-align:center;color:#fff;font-size:26px;line-height:1.7em;background:rgba(0,0,0,0.85);}
+        .sbg .arron{ z-index:10001; position:absolute;top:8px;right:8px;width:100px;height:100px;background:url(./img/arron.png) no-repeat; background-size:100px 100px;}
+        .sbg p{ z-index:10002; padding-top:78px;}s
+    </style>
+    
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-37154200-6', 'auto');
+  ga('send', 'pageview');
+
+</script>
+  
+  <script type="text/javascript" src="js/resource_loader.js"></script>
+<script type="text/javascript" src="js/jquery.js"></script> 
+<script type="text/javascript" src="js/easeljs-0.7.1.min.js"></script>
+<script type="text/javascript" src="js/tweenjs-0.5.1.min.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
+<script type="text/javascript" src="js/jquery.cookie.js"></script> 
+</head>
+<body onload="init()">
+<div id="sbg" class="sbg">
+    <div class="arron"></div>
+   <!--  <p id="msg">请点击右上角<br>点击【分享到朋友圈】<br>向你的小伙伴们炫耀一下成绩吧！</p> -->
+</div>
+
+	<!-- <div align="center" style="z-index:10000;font-size:30;display:block;position:absolute;bottom:5px;text-align:center;width:100%">
+		<a align="center" style="color:red" href="http://www.duopao.com/games/more">更多游戏</a>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<a align="center" style="color:red" href="#" onclick="rank()">排行榜</a>
+		<br><br>
+	</div> -->
+    <canvas id="canvas" width="1920" height="904"></canvas>
+    <script type="text/javascript"> 
+    window.shareData = {
+        "imgUrl": "http://resource3.duopao.com/duopao/icon/shootgame.jpg", //图标
+        "timeLineLink": "http://uc.duopao.com/uc/wxlogin?url=http://www.duopao.com/games/play/g20140823164405879661",//链接
+        "Rankstr" : "",
+		"tTitle": "神枪手-射就要射个痛快！",
+        "tContent": "瞄准后发射，看你能打中几环，考验你的眼明手快！"
+    };
+
+    function share(){
+        document.getElementById("sbg").className="sbgshow";
+        window.setTimeout(hiddenMe, 3000);
+    }
+
+    function hiddenMe(){
+        document.getElementById("sbg").className="sbg";
+    }
+	
+    function rank(){//排行榜
+         dp_Ranking();
+    }
+	
+    document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+        
+        WeixinJSBridge.on('menu:share:appmessage', function(argv) {
+            WeixinJSBridge.invoke('sendAppMessage', {
+                "img_url": window.shareData.imgUrl,
+                "link": window.shareData.timeLineLink,
+                "desc": window.shareData.tContent,
+                "title": window.shareData.tTitle
+            }, function(res) {
+			   dp_share();
+            })
+        });
+
+        WeixinJSBridge.on('menu:share:timeline', function(argv) {
+            WeixinJSBridge.invoke('shareTimeline', {
+                "img_url": window.shareData.imgUrl,
+                "img_width": "640",
+                "img_height": "640",
+                "link": window.shareData.timeLineLink,
+                "desc": window.shareData.tContent,
+                "title": window.shareData.tTitle
+            }, function(res) {
+                dp_share();
+            });
+        });
+
+
+        WeixinJSBridge.on('menu:share:weibo', function(argv) {
+            WeixinJSBridge.invoke('shareWeibo', {
+                "content": window.shareData.tContent,
+                "url": window.shareData.timeLineLink
+            }, function(res) {
+                dp_share();
+            });
+        });
+
+        }, false)
+	</script>
+
+  <div class="back">
+      <a  href="javascript:history.back()">
+         <img src="../../images/ico-back.png"></img>
+      </a>
+        <span class="heart-me">
+    <span class="h"></span>
+    <span class="num">132K+</span>
+ </span>
+ <script type="text/javascript">
+    var gameId = "game10";
+    var hdom = document.querySelector(".heart-me .h");
+    
+    hdom.onclick = function(){
+       if(hdom.className && hdom.className.indexOf("red") > -1 ){
+           hdom.className = hdom.className.replace("red");
+           localStorage[gameId] = 0;
+       }else{
+           hdom.className += " red";
+           localStorage[gameId] = 1;
+       }
+    }
+    
+    if(localStorage[gameId] == 1){
+       var hdom = document.querySelector(".heart-me .h");
+       hdom.className += " red";
+    }else if(hdom.className){
+       hdom.className = hdom.className.replace("red");
+    }
+    
+ </script>
+  </div>
+</body>
+</html>

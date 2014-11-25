@@ -1,0 +1,168 @@
+@charset "utf-8";
+/*css重置*/
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+  outline: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html, body{ 
+   height: 100%; 
+   width:100%;
+   font-size: 12px;
+   
+   -webkit-touch-callout: none; /* prevent callout to copy image, etc when tap to hold */
+   -webkit-text-size-adjust: 100%; /* prevent webkit from resizing text to fit */
+   -webkit-user-select: none; 
+   
+   background-color: #fff;
+   font-family:  Century Gothic,"Helvetica Neue",arial,sans-serif,Helvetica;
+}
+ 
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+ol, ul { list-style: none; }
+ 
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+strong { font-weight: bold; }
+ 
+table { border-collapse: collapse; border-spacing: 0; }
+
+a {
+    color: #333;
+    text-decoration: none;
+    -webkit-transition: color .2s ease-in-out;
+    -moz-transition: color .2s ease-in-out;
+    -o-transition: color .2s ease-in-out;
+    -ms-transition: color .2s ease-in-out;
+    transition: color .2s ease-in-out;
+
+}
+
+a:hover {
+    color: #690;
+    text-decoration: none;
+}
+
+a.special, .special a {
+    color: #690;
+}
+
+a.special:hover, .special a:hover {
+    color: #390;
+    text-decoration: none;
+}
+/*
+ *css通用样式表
+ */
+
+/*--清除浮动
+------------------------------------------------------------------------------------------*/
+.cf:before, .cf:after {
+    content: "";
+    display: table;
+}
+
+.cf:after {
+    clear: both;
+}
+
+.cf {
+    clear: both;
+    *zoom: 1;
+}
+
+.overflow {
+    overflow: hidden;
+    *zoom: 1;
+}
+
+
+/*--字号、颜色、外边距、内补丁、居中、行高、显示、隐藏
+------------------------------------------------------------------------------------------*/
+/* 字号 */
+.f9 {
+    font-size: 9px;
+    -webkit-text-size-adjust: none;
+}
+
+.f11 {
+    font-size: 11px;
+    -webkit-text-size-adjust: none;
+}
+
+.f12 {
+    font-size: 12px;
+}
+
+.f14 {
+    font-size: 14px;
+}
+
+.f16 {
+    font-size: 16px;
+}
+
+.f18 {
+    font-size: 18px;
+}
+
+.f20 {
+    font-size: 20px;
+}
+
+.fb12 {
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.fb14 {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.fb16 {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.fb18 {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.fb20 {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+/* 隐藏 居中 */
+.fb {
+    font-weight: 700;
+}
+
+.tc {
+    text-align: center;
+}
+
+.hide {
+    display: none !important;
+}
+
+/*文字隐藏*/
+.te {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+

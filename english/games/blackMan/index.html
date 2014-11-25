@@ -1,0 +1,99 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta id="viewport" name="viewport" content="width=480,user-scalable=no;" />
+		<script type="text/javascript">
+           document.write('<script type="text/javascript" src="js/resource_loader.js?ver='+Math.random()+'"><\/script>');</script>
+		<script data-main="js/main" src="js/require.js"></script>
+		<title>Game</title>
+        <link href="../../common.css" rel="stylesheet" type="text/css"></link>
+        
+		<style type="text/css">
+			body{
+		        margin:0px;
+		        padding:0px;
+		        overflow: hidden;
+		    }
+		</style>
+		
+		<style>
+        html {
+            -ms-touch-action: none; /* Direct all pointer events to JavaScript code. */
+        }
+        .sbgshow{z-index:10000;display:block;position:fixed;top:0;left:0;width:100%;height:100%;text-align:center;color:#fff;font-size:30px;line-height:1.7em;background:rgba(0,0,0,0.85);}
+        .sbgshow .arron{z-index:10000; position:absolute;top:8px;right:8px;width:100px;height:100px;background:url(./img/arron.png) no-repeat; background-size:100px 100px;}
+        .sbgshow p{z-index:10000; padding-top:78px;}
+        .sbg{display:none; z-index:10000;  position:fixed;top:0;left:0;width:100%;height:100%;text-align:center;color:#fff;font-size:26px;line-height:1.7em;background:rgba(0,0,0,0.85);}
+        .sbg .arron{ z-index:10001; position:absolute;top:8px;right:8px;width:100px;height:100px;background:url(./img/arron.png) no-repeat; background-size:100px 100px;}
+        .sbg p{ z-index:10002; padding-top:78px;}
+
+		</style>
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-37154200-6', 'auto');
+          ga('send', 'pageview');
+
+        </script>
+
+	</head>
+	<body>
+   
+  <div class="back">
+      <a  href="javascript:history.back()">
+         <img src="../../images/ico-back.png"></img>
+      </a>
+        <span class="heart-me">
+    <span class="h"></span>
+    <span class="num">201K+</span>
+ </span>
+ <script type="text/javascript">
+    var gameId = "game7";
+    var hdom = document.querySelector(".heart-me .h");
+    
+    hdom.onclick = function(){
+       if(hdom.className && hdom.className.indexOf("red") > -1 ){
+           hdom.className = hdom.className.replace("red");
+           localStorage[gameId] = 0;
+       }else{
+           hdom.className += " red";
+           localStorage[gameId] = 1;
+       }
+    }
+    
+    if(localStorage[gameId] == 1){
+       var hdom = document.querySelector(".heart-me .h");
+       hdom.className += " red";
+    }else if(hdom.className){
+       hdom.className = hdom.className.replace("red");
+    }
+    
+ </script>
+  </div>
+
+
+		<div id="sbg" class="sbg">
+			<div class="arron"></div>
+			
+		</div>
+
+		<div style="text-align:center;">
+			<canvas id="linkScreen">
+				很遗憾，您的浏览器不支持HTML5，请使用支持HTML5的浏览器。
+			</canvas>
+		</div>
+		
+		<script type="text/javascript">
+        </script>
+
+		
+		<script type="text/javascript">
+		var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+		document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F81f46a3a9b52e356814edfcca923cb37' type='text/javascript'%3E%3C/script%3E"));
+		</script>
+	</body>
+</html>

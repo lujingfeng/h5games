@@ -1,0 +1,173 @@
+﻿<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimal-ui" />
+		<meta name="mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+		<link href="css/game.css" rel="stylesheet" type="text/css" />
+        <link href="../../common.css" rel="stylesheet" type="text/css"></link>
+		<script type="text/javascript" src="js/ninja-1.0.0.min.js"></script>
+		<meta name="robots" content="all" />
+		<title>marvelous ninja</title>
+		<script type="text/javascript">document.write('<script type="text/javascript" src="js/resource_loader.js?ver='+Math.random()+'"><\/script>')</script>
+	 <style>
+        body {
+            text-align: center;
+            background: #000000;
+            padding: 0;
+            border: 0;
+            margin: 0;
+            height: 100%;
+        }
+
+        html {
+            -ms-touch-action: none; /* Direct all pointer events to JavaScript code. */
+        }
+        .sbgshow{display:block;position:fixed;top:0;left:0;width:100%;height:100%;text-align:center;color:#fff;font-size:30px;line-height:1.7em;background:rgba(0,0,0,0.85);}
+        .sbgshow .arron{ position:absolute;top:8px;right:8px;width:100px;height:100px;background:url(./img/arron.png) no-repeat; background-size:100px 100px;}
+        .sbgshow p{padding-top:78px;}
+        .sbg{display:none;position:fixed;top:0;left:0;width:100%;height:100%;text-align:center;color:#fff;font-size:26px;line-height:1.7em;background:rgba(0,0,0,0.85);}
+        .sbg .arron{ position:absolute;top:8px;right:8px;width:100px;height:100px;background:url(./img/arron.png) no-repeat; background-size:100px 100px;}
+        .sbg p{padding-top:78px;}
+    </style>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-37154200-6', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+	</head>
+	<body>
+    <div class="back">
+          <a  href="javascript:history.back()">
+             <img src="../../images/ico-back.png"></img>
+          </a>
+            
+     </div>
+     <script type="text/javascript">
+        var gameId = "game14";
+        var hdom = document.querySelector(".heart-me .h");
+        
+        hdom.onclick = function(){
+           if(hdom.className && hdom.className.indexOf("red") > -1 ){
+               hdom.className = hdom.className.replace("red");
+               localStorage[gameId] = 0;
+           }else{
+               hdom.className += " red";
+               localStorage[gameId] = 1;
+           }
+        }
+        
+        if(localStorage[gameId] == 1){
+           var hdom = document.querySelector(".heart-me .h");
+           hdom.className += " red";
+        }else if(hdom.className){
+           hdom.className = hdom.className.replace("red");
+        }
+        
+     </script>
+	<div id="sbg" class="sbg">
+<div class="arron"></div>
+    <p id="msg">请点击右上角<br>点击【分享到朋友圈】<br>与小伙伴们一起分享你的好成绩吧！</p>
+</div>
+		<div id="moregame" style="display:none;position:fixed;z-index:99; bottom:20px; left:0px; font-size:20px; width:100%; text-align:center;">
+		<a href="javascript:void(0);" style="padding: 8px 20px;
+			background-color: rgb(93, 18, 163);
+			border-radius: 5px;
+		text-decoration: none;color:white;" onclick="do_share();">炫耀一下</a>
+		<a href="javascript:void(0);" style="padding: 8px 20px;
+			background-color: rgb(93, 18, 163);
+			border-radius: 5px;
+		text-decoration: none;color:white;" onclick="clickMore();">更多游戏</a>
+	</div>
+		<div id="viewporter">
+			<div id="FOTN-game-container"></div>
+		</div>
+		<div id="lock" class="deviceLock">
+			<div class="rotateDevice"></div>
+		</div>
+
+<script>
+    window.shareData = {
+        "imgUrl": "http://resource5.duopao.com/duopao/icon/ssrz.jpg", //图标
+        "timeLineLink": "http://uc.duopao.com/uc/wxlogin?url=http://www.duopao.com/games/play/g20141009185159329796",//链接
+        "tTitle": "生死忍者",
+        "tContent": "生死忍者-多泡游戏！"
+    };
+    function showmore(){//更多游戏
+        window.location.href="http://www.duopao.com/games/more";
+    }
+    function share(){
+        document.getElementById("sbg").className="sbgshow";
+        window.setTimeout(hiddenMe, 3000);
+    }
+
+    function hiddenMe(){
+        document.getElementById("sbg").className="sbg";
+    }
+
+    document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+        
+        WeixinJSBridge.on('menu:share:appmessage', function(argv) {
+            WeixinJSBridge.invoke('sendAppMessage', {
+                "img_url": window.shareData.imgUrl,
+                "link": window.shareData.timeLineLink,
+                "desc": window.shareData.tContent,
+                "title": window.shareData.tTitle
+            }, function(res) {
+		dp_share();
+            })
+        });
+
+        WeixinJSBridge.on('menu:share:timeline', function(argv) {
+            WeixinJSBridge.invoke('shareTimeline', {
+                "img_url": window.shareData.imgUrl,
+                "img_width": "640",
+                "img_height": "640",
+                "link": window.shareData.timeLineLink,
+                "desc": window.shareData.tContent,
+                "title": window.shareData.tTitle
+            }, function(res) {
+                dp_share();
+            });
+        });
+
+
+        WeixinJSBridge.on('menu:share:weibo', function(argv) {
+            WeixinJSBridge.invoke('shareWeibo', {
+                "content": window.shareData.tContent,
+                "url": window.shareData.timeLineLink
+            }, function(res) {
+                dp_share();
+            });
+        });
+
+        }, false)
+
+ 
+	function goHome(){
+		//window.location.href="http://www.duopao.com/games/more";
+	}
+	function clickMore(){
+		//window.location.href="http://www.duopao.com/games/more";
+	}
+	function do_share(){
+		share();
+	}
+	function do_Ranking(){
+		//window.location.href="http://www.duopao.com/games/more";
+	}
+	var Rankstr = "";
+	function do_submitScore(score){
+			
+	}
+</script>
+	</body>
+</html>
