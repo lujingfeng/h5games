@@ -1,0 +1,94 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+  <title>Star Pops - Spiele-Umsonst.de</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <style>
+    html, body {
+      background: #333333;
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+        -ms-touch-action: none;
+      touch-action: none;
+      -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+    }
+
+    #content {
+      width: 100%;
+      height: 100%;
+      margin: 0px auto 1px auto;
+    }
+
+    @media (max-device-width: 8in), (max-device-height: 8in) {
+      html {
+        overflow: hidden;
+      }
+      html, body {
+        height: 100%;
+      }
+      #content {
+        height: 100%;
+        width: 100%;
+        margin: inherit;
+      }
+      .no-mobile {
+        display: none;
+      }
+    canvas {
+      -ms-touch-action: none;
+      touch-action: none;
+      overflow: hidden;
+      -ms-touch-action: none;
+      touch-action: none;
+      -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none; 
+    }
+    }
+  </style>
+</head>
+<body>
+
+<div id="content"></div>
+<!--<script src="http://markknol.github.io/console-log-viewer/console-log-viewer.js"></script>-->
+<script src="flambe.js"></script>
+<script>flambe.embed(["targets/main-html.js"], "content");</script>
+
+ <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-56996346-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+  <script>
+addEventListener("click", function() {
+    var
+          el = document.documentElement
+        , rfs =
+               el.requestFullScreen
+            || el.webkitRequestFullScreen
+            || el.mozRequestFullScreen
+    ;
+    rfs.call(el);
+});
+</script>
+</body>
+</html>
