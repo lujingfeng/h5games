@@ -1,0 +1,195 @@
+@charset "utf-8";
+body {
+    background-color: #eee;
+}
+
+/*game*/
+.game {
+}
+
+
+/*tab*/
+.game-tab {
+    padding: 10px 7px 10px 11px;
+    text-align: center;
+    overflow: hidden;
+    background-color: #f8f8f8;
+
+}
+
+.game-tab a {
+    width: 33%;
+    font-size: 18px;
+    margin-left: -4px;
+    height: 38px;
+    line-height: 38px;
+    text-align: center;
+    color: #2755b3;
+    border: 1px solid #2755b3;
+    border-left: none;
+    display: inline-block;
+}
+
+.game-tab .bor {
+    border-left: 1px solid #2755b3;
+}
+
+.game-tab a:last-child {
+    border-right: 1px solid #2755b3;
+    border-bottom-right-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+.game-tab a:first-child {
+    border-bottom-left-radius: 6px;
+    border-top-left-radius: 6px;
+}
+
+.game-tab .cur {
+    color: #fff;
+    background-color: #2755b3
+}
+
+/*游戏列表*/
+.game-box {
+}
+
+.game-list {
+}
+
+.game-list li {
+    margin-bottom: 10px;
+}
+
+.game-list .btn-down {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.heart {
+    display: inline-block;
+    height: 13px;
+    width: 13px;
+    background-image: url(../../images/game/ico-heart.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    -webkit-background-size: contain;
+    vertical-align: middle;
+}
+
+/*分类  sort*/
+
+.game-sort {
+}
+
+.ico-more {
+    padding-right: 20px;
+    height: 50px;
+    line-height: 50px;
+    display: block;
+    font-size: 14px;
+    color: #2755b3;
+    background: url("../../images/game/ico-more.png") no-repeat right center;
+    background-size: auto 30%;
+}
+
+.ico-app-01,
+.ico-app-02,
+.ico-app-03,
+.ico-app-04,
+.ico-app-05 {
+    padding-left: 60px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 18px;
+    color: #2755b3;
+    display: block;
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+}
+
+.ico-app-01 {
+    background-image: url("../../images/game/ico-app-01.png");
+}
+
+.ico-app-02 {
+    background-image: url("../../images/game/ico-app-02.png");
+}
+
+.ico-app-03 {
+    background-image: url("../../images/game/ico-app-03.png");
+}
+
+.ico-app-04 {
+    background-image: url("../../images/game/ico-app-04.png");
+}
+
+.ico-app-05 {
+    background-image: url("../../images/game/ico-app-05.png");
+}
+
+/*各种分辨率*/
+
+@media all and (min-width: 700px) and (max-width: 2560px) {
+
+    .iframe-box {
+        width: 800px;
+        height: 600px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin: -300px 0 0 -400px;
+    }
+    .apps-list .con-r .info{ height: 36px;}
+}
+
+@media all and (min-width: 700px) and (max-width: 990px) {
+    .game-list li {
+        float: left;
+        width: 46%;
+        margin: 0.5% 0 0.5% 1%;
+    }
+
+}
+
+@media all and (min-width: 1000px) and (max-width: 1190px) {
+
+    .game-list li {
+        float: left;
+        width: 46%;
+        margin: 0.7%;
+
+    }
+
+}
+
+@media all and (min-width: 1200px) and (max-width: 1340px) {
+
+    .game-list li {
+        float: left;
+        width: 30%;
+        margin: 0.6%;
+    }
+}
+
+@media all and (min-width: 1350px) and (max-width: 1600px) {
+
+    .game-list li {
+        float: left;
+        width: 31%;
+        margin: 0.2%;
+    }
+}
+
+@media all and (min-width: 1601px) {
+
+    .game-list li {
+        float: left;
+        width: 30%;
+        margin: 0.4%;
+
+    }
+}

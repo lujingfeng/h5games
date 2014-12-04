@@ -1,0 +1,89 @@
+@charset "utf-8";
+
+/*app列表  */
+.apps-list {
+    overflow: hidden;
+}
+
+.apps-list li {
+    padding: 10px;
+    margin: 10px;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.apps-list-box {
+    position: relative;
+}
+
+.apps-list-box a {
+    display: block;
+    overflow: hidden;
+}
+
+.apps-list .pic {
+    position: relative;
+    width: 13%;
+    margin-right: 10px;
+    display: block;
+}
+
+.apps-list .pic img {
+    width: 100%;
+}
+
+.apps-list .con-r {
+    float: left;
+    width: 80%;
+    display: block;
+}
+
+.apps-list .con-r .title {
+    margin-right: 80px;
+    font-size: 16px;
+}
+
+.apps-list .con-r .version {
+    color: #999;
+}
+
+.apps-list .con-r .version em {
+    margin: 0 3px;
+    vertical-align: top;
+    line-height: 16px;
+}
+
+.apps-list .con-r .info {
+    padding: 5px 0 0;
+    color: #666;
+    word-wrap: break-word;
+    overflow: hidden;
+    /*border-bottom: 1px solid #eaeaea;*/
+}
+
+.apps-list .btn-down {
+    min-width: 50px;
+    padding: 0 5px;
+    font-size: 14px;
+    height: 26px;
+    line-height: 26px;
+    text-align: center;
+    color: #2755b3;
+    border: 1px solid #2755b3;
+    border-radius: 3px;
+    display: block;
+}
+
+
+.ico-new {
+    width: 70px;
+    height: 70px;
+    display: block;
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    background: url(../../images/game/ico-new.png) no-repeat;
+    background-size:55% auto;
+}
+
+/*End app列表  */
