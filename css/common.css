@@ -57,3 +57,15 @@
     width: 100%;
     border:solid 1px #fff;
 }
+
+.install{
+    position: absolute;
+top: 13px;
+right: 15px;
+line-height: 14px;
+color: #fff;
+background: #fff;
+padding: 6px;
+border-radius: 3px;
+color: #2755b3;
+}
