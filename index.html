@@ -429,7 +429,7 @@
         }(),
     };
     
-    if(browser.versions.android && !isWeiXin()){
+    if(browser.versions.android && !isWeiXin() && !window.xuanxuan){
         var btn = document.getElementById("install-btn");
         btn.style.display = "block";
     }
