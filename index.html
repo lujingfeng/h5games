@@ -428,9 +428,10 @@
             };
         }(),
     };
-    
-    if(browser.versions.android && !isWeiXin() && !window.xuanxuan){
-        var btn = document.getElementById("install-btn");
+    var btn = document.getElementById("install-btn");
+    if(isWeiXin() || window.xuanxuan || browser.versions.iPhone || browser.versions.iPad){
+        btn.style.display = "none";
+    }else{
         btn.style.display = "block";
     }
 
