@@ -1,0 +1,51 @@
+{
+  "name": "fis-bytedance",
+  "version": "0.0.2",
+  "description": "bytedance fe build",
+  "bin": {
+    "fisb": "bin/fisb"
+  },
+  "main": "fisb.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "fis-bytedance",
+    "fisb",
+    "fis"
+  ],
+  "author": {
+    "name": "bytedancefe"
+  },
+  "license": "BSD",
+  "dependencies": {
+    "fis": "^1.8.5",
+    "fis-parser-less": "^0.1.1",
+    "fis-parser-sass": "^0.2.1",
+    "fis-parser-utc": "0.0.2",
+    "fis-postpackager-autoload": "0.0.13",
+    "fis-postpackager-simple": "0.0.23",
+    "fis-postprocessor-require-async": "0.0.8"
+  },
+  "_id": "fis-bytedance@0.0.2",
+  "_shasum": "9e6accffe67f9caec7804e7900f909da0d7cea63",
+  "_from": "fis-bytedance@",
+  "_npmVersion": "1.4.28",
+  "_npmUser": {
+    "name": "zhoujiequn",
+    "email": "zhoujq861124@me.com"
+  },
+  "maintainers": [
+    {
+      "name": "zhoujiequn",
+      "email": "zhoujq861124@me.com"
+    }
+  ],
+  "dist": {
+    "shasum": "9e6accffe67f9caec7804e7900f909da0d7cea63",
+    "tarball": "http://registry.npmjs.org/fis-bytedance/-/fis-bytedance-0.0.2.tgz"
+  },
+  "directories": {},
+  "_resolved": "https://registry.npmjs.org/fis-bytedance/-/fis-bytedance-0.0.2.tgz",
+  "readme": "ERROR: No README data found!"
+}
