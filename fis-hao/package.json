@@ -1,0 +1,37 @@
+{
+  "name": "fis-hao",
+  "version": "0.0.3",
+  "description": "hao de fe build",
+  "bin": {
+    "fish": "bin/fish"
+  },
+  "main": "fish.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "fis-haode",
+    "fish"
+  ],
+  "author": {
+    "name": "haode"
+  },
+  "license": "BSD",
+  "dependencies": {
+    "fis": "^1.8.5",
+    "fis-lint-jshint": "0.0.9",
+    "fis-parser-less": "^0.1.1",
+    "fis-parser-utc": "0.0.2",
+    "fis-postpackager-autoload": "0.0.13",
+    "fis-postpackager-simple": "0.0.23",
+    "fis-postprocessor-require-async": "0.0.8",
+    "fis-parser-react": "0.13.3"
+  },
+  "maintainers": [
+    {
+      "name": "lujingfeng",
+      "email": "lujingfeng@haodehaode.cn"
+    }
+  ],
+  "readme": "ERROR: No README data found!"
+}
